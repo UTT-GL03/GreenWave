@@ -8,7 +8,9 @@ Qui plus est, en 2024 46% des français (31,1 millions, source : [Médiamétrie]
 
 ## Utilité sociale
 Permet d'avoir accès à la culture à moindre coup.
+
 La musique agit sur le système de récompense du cerveau et stimule la libération de dopamine qui, à son tour, active la sécrétion d'endorphines procurant une sensation de bien-être. De ce fait, elle réduit aussi le stress et l'anxiété.
+
 La musique stimule la créativité, le développement de compétences auditives.
 
 ## Effets de la numérisation
