@@ -13,5 +13,13 @@ La musique agit sur le système de récompense du cerveau et stimule la libérat
 
 La musique stimule la créativité, le développement de compétences auditives.
 
+
+substitue aux CDs, vinyles, ...
+
+effet rebond : 
+Hausse du temps d’écoute & Attraction d’un plus grand public
+
+Qualité sonore / confort
+
 ## Effets de la numérisation
 
