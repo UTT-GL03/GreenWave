@@ -1,0 +1,49 @@
+{
+  "extra-header": {},
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Les pages les plus visitées",
+      "target": "",
+      "course": "",
+      "is-best-pages": true,
+      "urls": [
+        "https://music.youtube.com/",
+        "https://music.youtube.com/playlist?list=OLAK5uy_kOH4J6_wkIRB_Ge029T5jCQ5r0qCtW3lM"
+      ]
+    },
+    {
+      "name": "Lance des playlists depuis l'accueil",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://music.youtube.com/",
+        "https://music.youtube.com/playlist?list=OLAK5uy_kOH4J6_wkIRB_Ge029T5jCQ5r0qCtW3lM",
+        "https://music.youtube.com/watch?v=AzaTyxMduH4&list=OLAK5uy_kOH4J6_wkIRB_Ge029T5jCQ5r0qCtW3lM",
+        "https://music.youtube.com/?bis",
+        "https://music.youtube.com/playlist?list=OLAK5uy_ndUxk1k_Vwvbx00oKHGSroGtouL2Kjxbg",
+        "https://music.youtube.com/watch?v=eY0Yma7gEEg&list=OLAK5uy_ndUxk1k_Vwvbx00oKHGSroGtouL2Kjxbg"
+      ]
+    },
+    {
+      "name": "Recherche une musique et la lance",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://music.youtube.com/",
+        "https://music.youtube.com/search?q=money+for+nothing",
+        "https://music.youtube.com/watch?v=6K6ODTZ7c10",
+        "https://music.youtube.com/?bis",
+        "https://music.youtube.com/search?q=self+destruction+mode",
+        "https://music.youtube.com/watch?v=LS5_XQAbT8s"
+      ]
+    }
+  ]
+}
