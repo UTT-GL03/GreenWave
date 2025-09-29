@@ -50,8 +50,14 @@ Ce score est calculé en fonction de plusieurs facteurs comme :
 
 Nous avons réaliser une analyse des plateformes de nos concurents et voici les résultats:
 | Service | Score (sur 100) | Classe | Détail des mesures 
-| Spotify
-| Apple Music |
-| Youtube Music |
-| SoundCloud |
+| Spotify | 22 | F 🟥 | [...](./benchmark/Spotify/ecoindex-environmental-statement.md)
+| Apple Music | 34 | E 🟨 | [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md)
+| Youtube Music | 88 | A 🟩 | [...](./benchmark/YoutubeMusic/ecoindex-environmental-statement.md)
+
+Tab.1 : Mesure de l'EcoIndex moyen de services de streaming musicaux.
+
+Le spectre des notes est très varié de A à F, pour le moins bon site : [Spotify](https://open.spotify.com/) nous constatons un grand nombre de contenu disponible des la page d'accueil. De plus, la page se charge complètement sans que ce soit nécessaire, l'utilisateur ne la défilant pas entière systématiquement. La résolution des pochettes d'album et de musique peut aussi être de trop grande qualité pour l'usage que nous en avons. Le site affiche aussi constament les playlists enregistrés de l'utilisateur ce qui ajoute autant de requête pour une image que de playlist enregistrée par l'utilisateur.
+A côté nous avons [Youtube Music](https://music.youtube.com/) qui s'impose en bon élève avec un bon score, ce résultat peut s'expliquer par un faible chargement de contenu à l'ouverture de la page d'accueil. Contrairement à spotify, YT Music, pour la recherche, envoie une requête après que l'utilisateur ai appuyé sur "entrée" et n'envoie pas une requete à chaque nouvelle lettre entrée.
+
+Ces comparaisons montrent qu'il existe des moyens d'obtenir un streaming quasi instantannée tout en réduisant au maximum les ressources utilisées.
 
