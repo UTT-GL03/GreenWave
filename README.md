@@ -25,7 +25,9 @@ Des solutions existent pour réduire ces impacts, l’usage du téléchargement 
 ## Scénario d'usage et impacts
 
 Ce service de musique peut être consulté plusieurs fois par jour ou en continu sur certaines périodes par les utilisteurs.
-C'est ainsi que nous avons conçus
+C'est ainsi que nous avons conçus deux scénarios, un où le lecteur sélectionne un album ou une playlist, l'effet est le même, une page contenant plusieurs titres, il lance cette playlist, chargant ainsi un premier titre. Le deuxième scénario consiste a rechercher un titre à l'aide de la barre de recherche, l'objectif et de mesurer l'impact de la recherche dans une base de données.
+
+De plus, dans nos scénario, nous effectuons le geste deux fois en repassant par la page d'accueil pour mesurer l'optimisation de la mise en cache, vérifier que l'on ne re-télécharge pas certaines informations déjà consulté.
 
 ## Scénario : "Lance des playlists depuis l'accueil"
 1. L'utilisateur se rend sur la page d'accueil, sélectionne un album à écouter et clique dessus
