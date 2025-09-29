@@ -1,0 +1,47 @@
+{
+  "extra-header": {},
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Les pages les plus visitées",
+      "target": "",
+      "course": "",
+      "is-best-pages": true,
+      "urls": [
+        "https://open.spotify.com/",
+        "https://open.spotify.com/intl-fr/album/6y0rmE7jkFS9cB03Gw0qKV"
+      ]
+    },
+    {
+      "name": "Lance des playlists depuis l'accueil",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://open.spotify.com/",
+        "https://open.spotify.com/intl-fr/album/6y0rmE7jkFS9cB03Gw0qKV",
+        "https://open.spotify.com/?bis",
+        "https://open.spotify.com/intl-fr/album/1REfaUH0Ic7VnohlnySdpF"
+      ]
+    },
+    {
+      "name": "Recherche une musique et la lance",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://open.spotify.com/",
+        "https://open.spotify.com/search/money%20for%20nothing",
+        "https://open.spotify.com/intl-fr/track/4nFNJmjfgBF7jwv2oBC45b",
+        "https://open.spotify.com/?bis",
+        "https://open.spotify.com/search/self%20destruction%20mode",
+        "https://open.spotify.com/intl-fr/track/2bUEPDiGO5iGxgkiDo7OPF"
+      ]
+    }
+  ]
+}
