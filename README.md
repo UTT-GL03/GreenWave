@@ -22,3 +22,20 @@ Donc écouté une seule fois, un album en streaming peut donc apparaître comme 
 
 Des solutions existent pour réduire ces impacts, l’usage du téléchargement et du stockage local par exemple, puisqu’un morceau téléchargé une fois puis réécouté plusieurs fois ne consomme plus de bande passante.
 
+## Scénario d'usage et impacts
+
+XXXXXXX
+
+## Scénario : "Lance des playlists depuis l'accueil"
+1. L'utilisateur se rend sur la page d'accueil, sélectionne un album à écouter et clique dessus
+2. Il lance l'écoute de cet album
+3. Il revient sur la page d'accueil et consulte pour trouver un autre album
+4. Il clique sur un album et le lance
+
+## Scénario : "Recherche une musique et la lance"
+1. L'utilisateur se rend sur la page d'accueil, recherche une musique avec la barre de recherche
+2. Il defile le résultat des rechecheres et sélectionne la musique souhaitée et lance la musique
+3. Il revient sur la page d'accueil et recherche une autre musique
+4. Il lance la musique recherchée
+
+
