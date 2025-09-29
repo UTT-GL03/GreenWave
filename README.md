@@ -52,8 +52,8 @@ Nous avons réaliser une analyse des plateformes de nos concurents et voici les 
 
 | Service | Score (sur 100) | Classe | Détail des mesures 
 | :-- | --: | --: | --:
-| Spotify | 34 | E 🟥 | [...](./benchmark/Spotify/ecoindex-environmental-statement.md)
-| Apple Music | 34 | E 🟨 | [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md)
+| Spotify | 34 | E 🟧 | [...](./benchmark/Spotify/ecoindex-environmental-statement.md)
+| Apple Music | 34 | E 🟧 | [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md)
 | Youtube Music | 88 | A 🟩 | [...](./benchmark/YoutubeMusic/ecoindex-environmental-statement.md)
 
 Tab.1 : Mesure de l'EcoIndex moyen de services de streaming musicaux.
