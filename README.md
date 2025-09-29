@@ -38,4 +38,17 @@ XXXXXXX
 3. Il revient sur la page d'accueil et recherche une autre musique
 4. Il lance la musique recherchée
 
+## Impact de l'exécution des scénarios auprès de différents services concurrents
+Il existe un moyen d'estimer l'impact numérique d'un site web, cela s'appelle l'ecoIndex, il calcule un score (de A à G source: (EcoIndex)[[https://www.ecoindex.fr/resultat/?id=3a4a8633-f3ab-4841-ad50-086c7fd1a255#score-details](https://www.ecoindex.fr/)]).
+Ce score est calculé en fonction de plusieurs facteurs comme :
+- Le nombre d'appel au serveur (requêtes)
+- La quantité d'information téléchargée
+- La compléxité et l'optimisation du site
+
+Nous avons réaliser une analyse des plateformes de nos concurents et voici les résultats:
+| Service | Score (sur 100) | Classe | Détail des mesures 
+| Spotify
+| Apple Music |
+| Youtube Music |
+| SoundCloud |
 
