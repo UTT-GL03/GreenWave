@@ -49,7 +49,9 @@ Ce score est calculé en fonction de plusieurs facteurs comme :
 - La compléxité et l'optimisation du site
 
 Nous avons réaliser une analyse des plateformes de nos concurents et voici les résultats:
+
 | Service | Score (sur 100) | Classe | Détail des mesures 
+| :-- | --: | --: | --:
 | Spotify | 22 | F 🟥 | [...](./benchmark/Spotify/ecoindex-environmental-statement.md)
 | Apple Music | 34 | E 🟨 | [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md)
 | Youtube Music | 88 | A 🟩 | [...](./benchmark/YoutubeMusic/ecoindex-environmental-statement.md)
