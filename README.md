@@ -24,7 +24,8 @@ Des solutions existent pour réduire ces impacts, l’usage du téléchargement 
 
 ## Scénario d'usage et impacts
 
-XXXXXXX
+Ce service de musique peut être consulté plusieurs fois par jour ou en continu sur certaines périodes par les utilisteurs.
+C'est ainsi que nous avons conçus
 
 ## Scénario : "Lance des playlists depuis l'accueil"
 1. L'utilisateur se rend sur la page d'accueil, sélectionne un album à écouter et clique dessus
