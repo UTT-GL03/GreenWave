@@ -1,0 +1,49 @@
+{
+  "extra-header": {},
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Les pages les plus visitées",
+      "target": "",
+      "course": "",
+      "is-best-pages": true,
+      "urls": [
+        "https://music.apple.com/fr/home",
+        "https://music.apple.com/fr/album/vie/1834042903"
+      ]
+    },
+    {
+      "name": "Lance des playlists depuis l'accueil",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://music.apple.com/fr/home",
+        "https://music.apple.com/fr/new",
+        "https://music.apple.com/fr/album/vie/1834042903",
+        "https://music.apple.com/fr/home?bis",
+        "https://music.apple.com/fr/new",
+        "https://music.apple.com/fr/album/grandir-ep/1830256075"
+      ]
+    },
+    {
+      "name": "Recherche une musique et la lance",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://music.apple.com/fr/home",
+        "https://music.apple.com/fr/search?term=money%20for%20nothing",
+        "https://music.apple.com/fr/album/money-for-nothing-remastered-1996/1565391787?i=1565391810",
+        "https://music.apple.com/fr/home?bis",
+        "https://music.apple.com/fr/search?term=self%20destruction%20mode",
+        "https://music.apple.com/fr/album/self-destruction-mode/1710237078?i=1710237402"
+      ]
+    }
+  ]
+}
