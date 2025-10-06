@@ -75,18 +75,34 @@ Pour compléter notre analyse, il est important de comprendre les modèles écon
 
 Tab2. Modèles économiques des leader du streaming musical
 
-| Source de revenu | Montant unitaire | Quantité pour financer un salaire [1](#note-salaire) |
-| :-- | --: | --: |
-| Abonnement | 11,5€ ([2](#note-abonnement)) | 164 |
-| Publicité | 0.01€ (en moyenne) | 188 200 |
-
----
+| Source de revenu | Montant unitaire | Quantité pour financer un salaire [[1](#note-salaire)] | Quantité pour financer l'infrastructure [[2](#note-infra)] | Spotify | Apple Music | Youtube Music | GreenWave
+| :-- | --: | --: | --: | --: | --: | --: | --: 
+| Abonnement | 11,5€ [[3](#note-abonnement)] | 324 | 2 916 | ✔️ | ✔️ | ✔️ | ✔️
+| Publicité | 0.01€ (en moyenne) [[4](#note-cpm)] | 370 300 | 3 500 000 | ✔️ | ❌ | ✔️ | ✔️
+| Token | 5€ [[5](#note-token)] | 746 | 7 000 | ❌ | ❌ | ❌ | ✔️
 
 #### Notes
-- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur [Source](https://weepo.fr/blog/comment-coute-un-smic-pour-lentreprise)  
-- <a name="note-abonnement"></a>**2 :** Basé sur l'abonnement classique de Spotify (12,14€), Apple Music (10,99€) et YouTube Music (10,99€)
+- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur sur la base d'un salaire médiant 3730€ [Source]([https://weepo.fr/blog/comment-coute-un-smic-pour-lentreprise](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net))  
+- <a name="note-infra"></a>**2 :** Estimation grossière du coût d'une infrastructure au mois ~35k€ [Source](https://yeeply.com/fr/combien-ca-coute/plateforme-streaming/)
+- <a name="note-abonnement"></a>**3 :** Basé sur l'abonnement classique de Spotify (12,14€), Apple Music (10,99€) et YouTube Music (10,99€)
+- <a name="note-cpm"></a>**4 :** Revenu moyen pour 1000 vues en moyenne entre 12 et 25€ [Source](https://www.ekole.fr/blog/gagnez-en-notoriete-aupres-des-jeunes-grace-a-la-publicite-sur-spotify)
+- <a name="note-token"></a>**5 :** Idée de tokenisation de diffusion et rediffusion de concert live (captation et diffusion payante) 
 
 Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateur non abonnés (non payants) rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify on une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "prenium".
 
 Nous avons donc des services similaires qui cherchent a se différencier de part leurs fonctionnalités et leur "package". Par exemple, Apple Music propose Apple TV+ dans son abonnement, ce qui constitue un avantage pour l'utilisateur intéressé par cette offre.
 De par leur objectif, les sites de streaming musical sont des produits de substitution les uns des autres, la musique reste la même quelque soit le distributeur. Comme dit avant les serices doivent trouver des moyens de se différencier que ce soit sur le prix pour devenir avantageux ou sur les fonctionnalités.
+
+L’analyse de l’offre des quotidiens nous a permis d’identifier les principales sources de revenus couramment utilisées (voir Tab. 2). En les confrontant à un bref état de l’art (voir Tab. 3), nous avons pu établir que :
+
+1. Bien que la proportion d'utilisateurs abonné soit plus faible que les non-abonnés, il représente une très grande majorité des revenus ;
+2. Le revenu des publicité est intéressant car nous parlons de publicité auditive (vendu plus cher que la publicité visuelle statique) ;
+3. Ainsi nous pensons que ces deux moyens de revenu nous semblent corrects, n'ayant pas d'impacts environnementaux pour les abonnements et faible pour les publicités car utilisant la même fonctionnalité que l'objectif principal (streaming audio) ;
+4. Nous pouvons imaginer ajouter un revenu, le token, en proposant des contenus bonus et exclusif comme de la diffusion en direct de concerts ;
+
+Par conséquent, pour limiter notre impact écologique, nous pensons à :
+
+- privilégier un maximum les abonnements car n'ayant pas d'impact environnementaux,
+- avoir une régie interne pour compléter les revenus, tout en faisant attention aux publicités diffusées (en accord avec nos valeurs),
+- compléter les revenus avec des contenus exclusifs accessibles via un système de token.
+
