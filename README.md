@@ -70,10 +70,10 @@ Pour compléter notre analyse, il est important de comprendre les modèles écon
 | Service | Compte gratuit | Abonné | Revenu
 | :-- | -- | -- | --
 | Spotify | <ul><li>Musique avec publicités (Régie interne)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieur</li></ul> | <ul><li>Revenu publicitaire (12%)</li><li>Revenu abonnement (88%)</li><li>[Source](https://pswd.fr/modele-economique-spotify/)</li></ul>
-| Apple Music | <ul><li>Écoute d'extrait (uniquement)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieur</li><li>Apple TV+</li></ul> | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (88%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul>
-| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li><li>Youtube "classique" sans publicités</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>
+| Apple Music | <ul><li>Écoute d'extrait (uniquement)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieure</li><li>Apple TV+</li></ul> | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (88%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul>
+| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li><li>Youtube "classique" sans publicités</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>
 
-Tab2. Modèles économiques des leader du streaming musical
+Tab2. Modèles économiques des leaders du streaming musical
 
 | Source de revenu | Montant unitaire | Quantité pour financer un salaire [[1](#note-salaire)] | Quantité pour financer l'infrastructure [[2](#note-infra)] | Spotify | Apple Music | Youtube Music | GreenWave
 | :-- | --: | --: | --: | --: | --: | --: | --: 
@@ -82,23 +82,23 @@ Tab2. Modèles économiques des leader du streaming musical
 | Token | 5€ [[5](#note-token)] | 746 | 7 000 | ❌ | ❌ | ❌ | ✔️
 
 #### Notes
-- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur sur la base d'un salaire médiant 3730€ [Source]([https://weepo.fr/blog/comment-coute-un-smic-pour-lentreprise](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net))  
+- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur sur la base d'un salaire médiant 3730€ [Source](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)  
 - <a name="note-infra"></a>**2 :** Estimation grossière du coût d'une infrastructure au mois ~35k€ [Source](https://yeeply.com/fr/combien-ca-coute/plateforme-streaming/)
 - <a name="note-abonnement"></a>**3 :** Basé sur l'abonnement classique de Spotify (12,14€), Apple Music (10,99€) et YouTube Music (10,99€)
 - <a name="note-cpm"></a>**4 :** Revenu moyen pour 1000 vues en moyenne entre 12 et 25€ [Source](https://www.ekole.fr/blog/gagnez-en-notoriete-aupres-des-jeunes-grace-a-la-publicite-sur-spotify)
 - <a name="note-token"></a>**5 :** Idée de tokenisation de diffusion et rediffusion de concert live (captation et diffusion payante) 
 
-Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateur non abonnés (non payants) rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify on une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "prenium".
+Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateurs non abonnés rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify ont une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "premium".
 
-Nous avons donc des services similaires qui cherchent a se différencier de part leurs fonctionnalités et leur "package". Par exemple, Apple Music propose Apple TV+ dans son abonnement, ce qui constitue un avantage pour l'utilisateur intéressé par cette offre.
-De par leur objectif, les sites de streaming musical sont des produits de substitution les uns des autres, la musique reste la même quelque soit le distributeur. Comme dit avant les serices doivent trouver des moyens de se différencier que ce soit sur le prix pour devenir avantageux ou sur les fonctionnalités.
+Nous avons donc des services similaires qui cherchent à se différencier de part leurs fonctionnalités et leur "package". Par exemple, Apple Music propose Apple TV+ dans son abonnement, ce qui constitue un avantage pour l'utilisateur intéressé par cette offre.
+De par leur essence, les sites de streaming musical sont des produits de substitution les uns des autres, la musique reste la même quelque soit le distributeur. Comme dit avant les services doivent trouver des moyens de se différencier que ce soit sur le prix pour devenir avantageux ou sur les fonctionnalités.
 
-L’analyse de l’offre des quotidiens nous a permis d’identifier les principales sources de revenus couramment utilisées (voir Tab. 2). En les confrontant à un bref état de l’art (voir Tab. 3), nous avons pu établir que :
+L’analyse de l’offre des plateformes de streaming nous a permis d’identifier les principales sources de revenus couramment utilisées (voir Tab. 2). En les confrontant à un bref état de l’art (voir Tab. 3), nous avons pu établir que :
 
-1. Bien que la proportion d'utilisateurs abonné soit plus faible que les non-abonnés, il représente une très grande majorité des revenus ;
-2. Le revenu des publicité est intéressant car nous parlons de publicité auditive (vendu plus cher que la publicité visuelle statique) ;
-3. Ainsi nous pensons que ces deux moyens de revenu nous semblent corrects, n'ayant pas d'impacts environnementaux pour les abonnements et faible pour les publicités car utilisant la même fonctionnalité que l'objectif principal (streaming audio) ;
-4. Nous pouvons imaginer ajouter un revenu, le token, en proposant des contenus bonus et exclusif comme de la diffusion en direct de concerts ;
+1. Bien que la proportion d'utilisateurs abonnés soit plus faible que celle des non-abonnés, ils représentent une très grande majorité des revenus ;
+2. Le revenu des publicités est intéressant car nous parlons de publicité auditive (vendue plus chère que la publicité visuelle statique) ;
+3. Ainsi nous pensons que ces deux moyens de revenu nous semblent corrects, n'ayant pas d'impacts environnementaux pour les abonnements et faibles pour les publicités car utilisant la même fonctionnalité que l'objectif principal (streaming audio) ;
+4. Nous pouvons imaginer ajouter un revenu, le token, en proposant des contenus bonus et exclusifs comme de la diffusion en direct de concerts ;
 
 Par conséquent, pour limiter notre impact écologique, nous pensons à :
 
