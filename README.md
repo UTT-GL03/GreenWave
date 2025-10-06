@@ -63,3 +63,16 @@ A côté nous avons [Youtube Music](https://music.youtube.com/) qui s'impose en 
 
 Ces comparaisons montrent qu'il existe des moyens d'obtenir un streaming quasi instantannée tout en réduisant au maximum les ressources utilisées.
 
+## Modèle économique
+
+Pour compléter notre analyse, il est important de comprendre les modèles économiques de nos concurrents. Certains revenus peuvent provoquer un impact fort sur l'environnement. 
+
+| Service | Compte gratuit | Abonné | Revenu
+| :-- | -- | -- | --
+| Spotify | <ul><li>Musique avec publicités (Régie interne)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieur</li></ul> | <ul><li>Revenu publicitaire (12%)</li><li>Revenu abonnement (88%)</li><li>[Source](https://pswd.fr/modele-economique-spotify/)</li></ul>
+| Apple Music | <ul><li>Écoute d'extrait (uniquement)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieur</li><li>Apple TV+</li></ul> | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (88%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul>
+| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>
+
+Tab2. Modèles économiques des leader du streaming musical
+
+Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateur non abonnés (non payants) rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify on une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "prenium". 
