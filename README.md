@@ -71,8 +71,22 @@ Pour compléter notre analyse, il est important de comprendre les modèles écon
 | :-- | -- | -- | --
 | Spotify | <ul><li>Musique avec publicités (Régie interne)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieur</li></ul> | <ul><li>Revenu publicitaire (12%)</li><li>Revenu abonnement (88%)</li><li>[Source](https://pswd.fr/modele-economique-spotify/)</li></ul>
 | Apple Music | <ul><li>Écoute d'extrait (uniquement)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieur</li><li>Apple TV+</li></ul> | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (88%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul>
-| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>
+| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargment pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li><li>Youtube "classique" sans publicités</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>
 
 Tab2. Modèles économiques des leader du streaming musical
 
-Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateur non abonnés (non payants) rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify on une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "prenium". 
+| Source de revenu | Montant unitaire | Quantité pour financer un salaire [1](#note-salaire) |
+| :-- | --: | --: |
+| Abonnement | 11,5€ ([2](#note-abonnement)) | 164 |
+| Publicité | 0.01€ (en moyenne) | 188 200 |
+
+---
+
+#### Notes
+- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur [Source](https://weepo.fr/blog/comment-coute-un-smic-pour-lentreprise)  
+- <a name="note-abonnement"></a>**2 :** Basé sur l'abonnement classique de Spotify (12,14€), Apple Music (10,99€) et YouTube Music (10,99€)
+
+Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateur non abonnés (non payants) rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify on une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "prenium".
+
+Nous avons donc des services similaires qui cherchent a se différencier de part leurs fonctionnalités et leur "package". Par exemple, Apple Music propose Apple TV+ dans son abonnement, ce qui constitue un avantage pour l'utilisateur intéressé par cette offre.
+De par leur objectif, les sites de streaming musical sont des produits de substitution les uns des autres, la musique reste la même quelque soit le distributeur. Comme dit avant les serices doivent trouver des moyens de se différencier que ce soit sur le prix pour devenir avantageux ou sur les fonctionnalités.
