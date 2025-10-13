@@ -108,11 +108,24 @@ Par conséquent, pour limiter notre impact écologique, nous pensons à :
 
 ## Ressource et maquettage du service
 
-Les ressources possédants une représentation sur notre service sont de X types:
+Après avoir analysé les impacts environnementaux et les différents scénarios de notre service, nous sommes en mesure de concevoir des maquettes et un échantillon de données d'exemple.
+
+Les ressources possédants une représentation sur notre service sont de 5 types:
 - La page d'accueil qui sera le point de chute de tout visiteur (ayant pour URI `/`)
 - Une recherche de titre ou d'album redirigera vers un URI de type `/search?q=music+title`
 - Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
 - Les musiques seront de type `/track?listen={id}`
 - Les artistes seront de type `/artist?profil={id}`
+
+Pour avoir un site rapide et compact nous allons limiter le nombre de titre disponible à une vingtaine. Cela permettra de ne pas héberger un trop lourd paquet de données.
+De plus, pour ne pas violer les droits d'auteurs des différents label musicaux nous avons créer un échantillon de données à l'aide de dummy.json [générateur](./frontend/sample_data.hbs) => [résultat](./frontend/sample_data.json).
+
+Le modèle de données comprend deux grand type d'item, les `music` et les `list` (album/playlist), ces item possèdent :
+- `id`
+- `title`
+- `artist`
+- `picture`
+- etc...
+
 
 
