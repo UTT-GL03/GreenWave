@@ -112,4 +112,5 @@ Les ressources possédants une représentation sur notre service sont de X types
 - La page d'accueil qui sera le point de chute de tout visiteur (ayant pour URI `/`)
 - Une recherche de titre ou d'album redirigera vers un URI de type `/search?q=music+title`
 - Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
-- Les musique pour finir seront de type `/track?listen={id}`
+- Les musiques seront de type `/track?listen={id}`
+- Les artistes seront de type `/artist?profil={id}`
