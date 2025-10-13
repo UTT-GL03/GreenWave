@@ -102,7 +102,7 @@ L’analyse de l’offre des plateformes de streaming nous a permis d’identifi
 
 Par conséquent, pour limiter notre impact écologique, nous pensons à :
 
-- privilégier un maximum les abonnements car n'ayant pas d'impact environnementaux,
+- privilégier un maximum les abonnements car ayant un impact environnemental plus faible de prime abord (en excluant un potentiel effet rebond),
 - avoir une régie interne pour compléter les revenus, tout en faisant attention aux publicités diffusées (en accord avec nos valeurs),
 - compléter les revenus avec des contenus exclusifs accessibles via un système de token.
 
