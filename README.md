@@ -1,17 +1,17 @@
 # GreenWave
+
 Un service pour rendre le streaming musicale écoresponsable.
 
 ## Choix du sujet
+
 Notre binôme cumule a lui seul 15 heures d'écoute hebdomadaire. Conscient de l'impact écologique du streaming de manière générale, nous nous sentons concernés et souhaitons réduire cet impact.  
 Qui plus est, en 2024 46% des français (31,1 millions, source : [Médiamétrie](https://www.mediametrie.fr/fr/musique-et-medias-un-engouement-tres-fort-du-public-pour-une-offre-multiple)) écoutent de la musique via une plateforme de streaming au cours du mois. Ce qui prouve le fort interêt qu'a la population dans ce service, cette dernière a d'ailleurs fait augmenter cette pratique de 30% au cours des 5 dernières années (source [Médiamétrie](https://www.mediametrie.fr/fr/musique-et-medias-un-engouement-tres-fort-du-public-pour-une-offre-multiple))
-
 
 ## Utilité sociale
 
 La musique est un bien culturel essentiel et son accessibilité élargie constitue un bénéfice considérable. Le streaming permet d’y accéder à moindre coût tout en donnant à chacun la possibilité de découvrir une immense diversité musicale. Au-delà de cet accès, la musique agit directement sur la santé et le bien-être, elle stimule la libération d’endorphines, réduit le stress et l’anxiété, et favorise une sensation générale d’équilibre (source : [CNARCL](https://www.cnracl.retraites.fr/retraite/climats/societe/les-bienfaits-de-la-musique)). Elle a également un rôle éducatif et créatif, puisqu’elle stimule l’imagination. Au niveau territoriale, la dimension de localisation pourrait même permettre de mettre en lumière des artistes proches de l’auditeur, renforçant ainsi le lien avec la scène locale.
 
 Aujourd'hui, le secteur de la musique réalise environ quatre fois plus de chiffre d'affaires avec le streaming qu'avec les CD, vinyles, DVD/Blu-ray et cassettes réunis (source : [Statista](https://fr.statista.com/infographie/31877/evolution-chiffre-musique-enregistree-par-support-physique-streaming/)), qui eux nécessitent plastiques, métaux, emballages et transport. Cette nouvelle pratique peut donc être vu comme une forme de progrès écologique. Cependant, cette utilité sociale est à mettre en balance avec les risques liés à l’effet rebond. L’accès illimité encourage une hausse du temps d’écoute et attire un public plus large que par le passé. Par ailleurs, l’évolution vers une qualité sonore toujours plus élevée, voire vers le visionnage de clips vidéo, augmente l’empreinte carbone de ce service.
-
 
 ## Effets de la numérisation
 
@@ -30,31 +30,35 @@ C'est ainsi que nous avons conçus deux scénarios, un où le lecteur sélection
 De plus, dans nos scénario, nous effectuons le geste deux fois en repassant par la page d'accueil pour mesurer l'optimisation de la mise en cache, vérifier que l'on ne re-télécharge pas certaines informations déjà consulté.
 
 ## Scénario : "Lance des playlists depuis l'accueil"
+
 1. L'utilisateur se rend sur la page d'accueil, sélectionne un album à écouter et clique dessus
 2. Il lance l'écoute de cet album
 3. Il revient sur la page d'accueil et consulte pour trouver un autre album
 4. Il clique sur un album et le lance
 
 ## Scénario : "Recherche une musique et la lance"
+
 1. L'utilisateur se rend sur la page d'accueil, recherche une musique avec la barre de recherche
 2. Il defile le résultat des rechecheres et sélectionne la musique souhaitée et lance la musique
 3. Il revient sur la page d'accueil et recherche une autre musique
 4. Il lance la musique recherchée
 
 ## Impact de l'exécution des scénarios auprès de différents services concurrents
-Il existe un moyen d'estimer l'impact numérique d'un site web, cela s'appelle l'ecoIndex, il calcule un score (de A à G source: [EcoIndex](https://www.ecoindex.fr/resultat/?id=3a4a8633-f3ab-4841-ad50-086c7fd1a255#score-details](https://www.ecoindex.fr/)).
+
+Il existe un moyen d'estimer l'impact numérique d'un site web, cela s'appelle l'ecoIndex, il calcule un score (de A à G source: [EcoIndex](<https://www.ecoindex.fr/resultat/?id=3a4a8633-f3ab-4841-ad50-086c7fd1a255#score-details](https://www.ecoindex.fr/)>).
 Ce score est calculé en fonction de plusieurs facteurs comme :
+
 - Le nombre d'appel au serveur (requêtes)
 - La quantité d'information téléchargée
 - La compléxité et l'optimisation du site
 
 Nous avons réaliser une analyse des plateformes de nos concurents et voici les résultats:
 
-| Service | Score (sur 100) | Classe | Détail des mesures 
-| :-- | --: | --: | --:
-| Spotify | 34 | E 🟧 | [...](./benchmark/Spotify/ecoindex-environmental-statement.md)
-| Apple Music | 34 | E 🟧 | [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md)
-| Youtube Music | 88 | A 🟩 | [...](./benchmark/YoutubeMusic/ecoindex-environmental-statement.md)
+| Service       | Score (sur 100) | Classe |                                                  Détail des mesures |
+| :------------ | --------------: | -----: | ------------------------------------------------------------------: |
+| Spotify       |              34 |   E 🟧 |      [...](./benchmark/Spotify/ecoindex-environmental-statement.md) |
+| Apple Music   |              34 |   E 🟧 |   [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md) |
+| Youtube Music |              88 |   A 🟩 | [...](./benchmark/YoutubeMusic/ecoindex-environmental-statement.md) |
 
 Tab.1 : Mesure de l'EcoIndex moyen de services de streaming musicaux.
 
@@ -65,28 +69,29 @@ Ces comparaisons montrent qu'il existe des moyens d'obtenir un streaming quasi i
 
 ## Modèle économique
 
-Pour compléter notre analyse, il est important de comprendre les modèles économiques de nos concurrents. Certains revenus peuvent provoquer un impact fort sur l'environnement. 
+Pour compléter notre analyse, il est important de comprendre les modèles économiques de nos concurrents. Certains revenus peuvent provoquer un impact fort sur l'environnement.
 
-| Service | Compte gratuit | Abonné | Revenu
-| :-- | -- | -- | --
-| Spotify | <ul><li>Musique avec publicités (Régie interne)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieure</li></ul> | <ul><li>Revenu publicitaire (12%)</li><li>Revenu abonnement (88%)</li><li>[Source](https://pswd.fr/modele-economique-spotify/)</li></ul>
-| Apple Music | <ul><li>Écoute d'extrait (uniquement)</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieure</li><li>Apple TV+</li></ul> | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (45%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul>
-| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li><li>Youtube "classique" sans publicités</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>
+| Service       | Compte gratuit                                                                                           | Abonné                                                                                                                                                                                                                     | Revenu                                                                                                                                                                                                                                                  |
+| :------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spotify       | <ul><li>Musique avec publicités (Régie interne)</li></ul>                                                | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieure</li></ul>                                                             | <ul><li>Revenu publicitaire (12%)</li><li>Revenu abonnement (88%)</li><li>[Source](https://pswd.fr/modele-economique-spotify/)</li></ul>                                                                                                                |
+| Apple Music   | <ul><li>Écoute d'extrait (uniquement)</li></ul>                                                          | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieure</li><li>Apple TV+</li></ul>                                           | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (45%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul> |
+| Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li><li>Youtube "classique" sans publicités</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>                                                                                                                                       |
 
 Tab2. Modèles économiques des leaders du streaming musical
 
-| Source de revenu | Montant unitaire | Quantité pour financer un salaire [[1](#note-salaire)] | Quantité pour financer l'infrastructure [[2](#note-infra)] | Spotify | Apple Music | Youtube Music | GreenWave
-| :-- | --: | --: | --: | --: | --: | --: | --: 
-| Abonnement | 11,5€ [[3](#note-abonnement)] | 324 | 2 916 | ✔️ | ✔️ | ✔️ | ✔️
-| Publicité | 0.01€ (en moyenne) [[4](#note-cpm)] | 370 300 | 3 500 000 | ✔️ | ❌ | ✔️ | ✔️
-| Token | 5€ [[5](#note-token)] | 746 | 7 000 | ❌ | ❌ | ❌ | ✔️
+| Source de revenu |                    Montant unitaire | Quantité pour financer un salaire [[1](#note-salaire)] | Quantité pour financer l'infrastructure [[2](#note-infra)] | Spotify | Apple Music | Youtube Music | GreenWave |
+| :--------------- | ----------------------------------: | -----------------------------------------------------: | ---------------------------------------------------------: | ------: | ----------: | ------------: | --------: |
+| Abonnement       |       11,5€ [[3](#note-abonnement)] |                                                    324 |                                                      2 916 |      ✔️ |          ✔️ |            ✔️ |        ✔️ |
+| Publicité        | 0.01€ (en moyenne) [[4](#note-cpm)] |                                                370 300 |                                                  3 500 000 |      ✔️ |          ❌ |            ✔️ |        ✔️ |
+| Token            |               5€ [[5](#note-token)] |                                                    746 |                                                      7 000 |      ❌ |          ❌ |            ❌ |        ✔️ |
 
 #### Notes
-- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur sur la base d'un salaire médiant 3730€ [Source](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)  
+
+- <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur sur la base d'un salaire médiant 3730€ [Source](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)
 - <a name="note-infra"></a>**2 :** Estimation grossière du coût d'une infrastructure au mois ~35k€ [Source](https://yeeply.com/fr/combien-ca-coute/plateforme-streaming/)
 - <a name="note-abonnement"></a>**3 :** Basé sur l'abonnement classique de Spotify (12,14€), Apple Music (10,99€) et YouTube Music (10,99€)
 - <a name="note-cpm"></a>**4 :** Revenu moyen pour 1000 vues en moyenne entre 12 et 25€ [Source](https://www.ekole.fr/blog/gagnez-en-notoriete-aupres-des-jeunes-grace-a-la-publicite-sur-spotify)
-- <a name="note-token"></a>**5 :** Idée de tokenisation de diffusion et rediffusion de concert live (captation et diffusion payante) 
+- <a name="note-token"></a>**5 :** Idée de tokenisation de diffusion et rediffusion de concert live (captation et diffusion payante)
 
 Ici deux types de modèles ressortent, un gratuit et un payant, Apple Music décide de ne pas donner d'accès aux utilisateurs non abonnés rayant ainsi les publicités de ses offres. Cependant Youtube Music et Spotify ont une version gratuite, réduisant drastiquement les fonctionnalités, poussant ainsi l'utilisateur à cotiser pour la version "premium".
 
@@ -111,21 +116,28 @@ Par conséquent, pour limiter notre impact écologique, nous pensons à :
 Après avoir analysé les impacts environnementaux et les différents scénarios de notre service, nous sommes en mesure de concevoir des maquettes et un échantillon de données d'exemple.
 
 Les ressources possédants une représentation sur notre service sont de 5 types:
+
 - La page d'accueil qui sera le point de chute de tout visiteur (ayant pour URI `/`)
+  ![Maquette de la page d'accueil](./frontend/mockup/homepage.png)
+  **Fig. 1** : Maquette de la page d'accueil
 - Une recherche de titre ou d'album redirigera vers un URI de type `/search?q=music+title`
+  ![Maquette de la page des résultats d'une recherche](./frontend/mockup/searchpage.png)
+  **Fig. 2** : Maquette de la page des résultats d'une recherche
 - Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
+  ![Maquette de la page d'une liste de titres'](./frontend/mockup/listpage.png)
+  **Fig. 3** : Maquette de la page d'une liste de titres
 - Les musiques seront de type `/track?listen={id}`
+  ![Maquette de la page d'un titre'](./frontend/mockup/trackpage.png)
+  **Fig. 4** : Maquette de la page d'un titres
 - Les artistes seront de type `/artist?profil={id}`
 
 Pour avoir un site rapide et compact nous allons limiter le nombre de titre disponible à une vingtaine. Cela permettra de ne pas héberger un trop lourd paquet de données.
 De plus, pour ne pas violer les droits d'auteurs des différents label musicaux nous avons créer un échantillon de données à l'aide de dummy.json [générateur](./frontend/sample_data.hbs) => [résultat](./frontend/sample_data.json).
 
 Le modèle de données comprend deux grand type d'item, les `music` et les `list` (album/playlist), ces item possèdent :
+
 - `id`
 - `title`
 - `artist`
 - `picture`
 - etc...
-
-
-
