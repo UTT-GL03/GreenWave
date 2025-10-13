@@ -118,17 +118,29 @@ Après avoir analysé les impacts environnementaux et les différents scénarios
 Les ressources possédants une représentation sur notre service sont de 5 types:
 
 - La page d'accueil qui sera le point de chute de tout visiteur (ayant pour URI `/`)
-  ![Maquette de la page d'accueil](./frontend/mockup/homepage.png)
+  
+  <img src="./frontend/mockup/homepage.png" width="500" alt="Maquette de la page d'accueil" />
+  
   **Fig. 1** : Maquette de la page d'accueil
+  
 - Une recherche de titre ou d'album redirigera vers un URI de type `/search?q=music+title`
-  ![Maquette de la page des résultats d'une recherche](./frontend/mockup/searchpage.png)
+  
+  <img src="./frontend/mockup/searchpage.png" width="500" alt="Maquette de la page des résultats d'une recherche" />
+  
   **Fig. 2** : Maquette de la page des résultats d'une recherche
+  
 - Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
-  ![Maquette de la page d'une liste de titres'](./frontend/mockup/listpage.png)
+  
+  <img src="./frontend/mockup/listpage.png" width="500" alt="Maquette de la page d'une liste de titres" />
+  
   **Fig. 3** : Maquette de la page d'une liste de titres
+  
 - Les musiques seront de type `/track?listen={id}`
-  ![Maquette de la page d'un titre'](./frontend/mockup/trackpage.png)
+  
+  <img src="./frontend/mockup/trackpage.png" width="500" alt="Maquette de la page d'un titres" />
+  
   **Fig. 4** : Maquette de la page d'un titres
+  
 - Les artistes seront de type `/artist?profil={id}`
 
 Pour avoir un site rapide et compact nous allons limiter le nombre de titre disponible à une vingtaine. Cela permettra de ne pas héberger un trop lourd paquet de données.
