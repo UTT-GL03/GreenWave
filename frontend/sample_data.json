@@ -1,0 +1,228 @@
+{
+  "list": [
+      {
+        "id": "61",
+        "title": "Nisl sem.",
+        "artist": "Madelyn Connor",
+        "picture": 23618628,
+        "type": "Rap",
+        "category": "playlist",
+        "publication": "2020-01-01",
+        "musics": [
+          1950,
+          1165,
+          1425
+        ]
+      },
+      {
+        "id": "49",
+        "title": "Posuere.",
+        "artist": "Elaine Pendergast",
+        "picture": 22458518,
+        "type": "Alternative",
+        "category": "album",
+        "publication": "2023-04-20",
+        "musics": [
+          1912,
+          1986,
+          1568,
+          1462,
+          1763
+        ]
+      },
+      {
+        "id": "499",
+        "title": "Elit.",
+        "artist": "Lynetta Milling",
+        "picture": 65125754,
+        "type": "Alternative",
+        "category": "playlist",
+        "publication": "2011-07-17",
+        "musics": [
+          1216,
+          1634,
+          1098
+        ]
+      },
+      {
+        "id": "898",
+        "title": "Sem.",
+        "artist": "Juliana Castleman",
+        "picture": 98763689,
+        "type": "Classic",
+        "category": "album",
+        "publication": "2023-08-05",
+        "musics": [
+          1717,
+          1657,
+          1431,
+          1535,
+          1705,
+          1083,
+          1248,
+          1383
+        ]
+      },
+      {
+        "id": "189",
+        "title": "En.",
+        "artist": "Austin Pendergast",
+        "picture": 77622530,
+        "type": "Electro",
+        "category": "album",
+        "publication": "2024-11-19",
+        "musics": [
+          1434,
+          1422,
+          1932,
+          1394
+        ]
+      },
+      {
+        "id": "830",
+        "title": "Nisl.",
+        "artist": "Haydee Matzen",
+        "picture": 81918248,
+        "type": "Electro",
+        "category": "album",
+        "publication": "2016-03-05",
+        "musics": [
+          1893,
+          1429,
+          1517,
+          1925,
+          1333,
+          1313,
+          1855
+        ]
+      },
+      {
+        "id": "603",
+        "title": "Ligula ornare tortor.",
+        "artist": "Layla Schaefer",
+        "picture": 50176574,
+        "type": "Pop",
+        "category": "playlist",
+        "publication": "2018-02-19",
+        "musics": [
+          1076,
+          1451,
+          1384,
+          1255,
+          1191,
+          1346
+        ]
+      },
+      {
+        "id": "831",
+        "title": "Tristique ut mattis.",
+        "artist": "Cecilia Connor",
+        "picture": 15280949,
+        "type": "Classic",
+        "category": "album",
+        "publication": "2018-04-11",
+        "musics": [
+          1394,
+          1750,
+          1856,
+          1358,
+          1087,
+          1385,
+          1046,
+          1094
+        ]
+      }
+  ],
+  "music" : [
+      {
+        "id": "1831",
+        "title": "Euismod auctor.",
+        "artist": "Eleanore Coolidge",
+        "album": 685,
+        "picture": 36806813,
+        "type": "Electro",
+        "publication": "2023-01-15"
+      },
+      {
+        "id": "1085",
+        "title": "Proin sodales enim.",
+        "artist": "Grace Oldman",
+        "album": 25,
+        "picture": 77966196,
+        "type": "Pop",
+        "publication": "2018-12-16"
+      },
+      {
+        "id": "1707",
+        "title": "Proin mi it.",
+        "artist": "Darrell Pendergast",
+        "album": 602,
+        "picture": 56008087,
+        "type": "Classic",
+        "publication": "2013-06-29"
+      },
+      {
+        "id": "1425",
+        "title": "Dia cras lum.",
+        "artist": "Miles Lenihan",
+        "album": 680,
+        "picture": 27152386,
+        "type": "Electro",
+        "publication": "2014-04-22"
+      },
+      {
+        "id": "1049",
+        "title": "Pharetra.",
+        "artist": "Emma Fennell",
+        "album": 892,
+        "picture": 38749003,
+        "type": "Electro",
+        "publication": "2010-01-20"
+      },
+      {
+        "id": "1446",
+        "title": "Blandit ornare.",
+        "artist": "Jenna Seal",
+        "album": 543,
+        "picture": 38839440,
+        "type": "Alternative",
+        "publication": "2010-07-31"
+      },
+      {
+        "id": "1494",
+        "title": "Lacus placerat.",
+        "artist": "Gavin Mercer",
+        "album": 554,
+        "picture": 84931117,
+        "type": "Classic",
+        "publication": "2012-06-01"
+      },
+      {
+        "id": "1776",
+        "title": "Quis.",
+        "artist": "Rikki Dunham",
+        "album": 862,
+        "picture": 75231845,
+        "type": "Rock",
+        "publication": "2021-01-28"
+      },
+      {
+        "id": "1198",
+        "title": "Eu.",
+        "artist": "Andy Brandt",
+        "album": 645,
+        "picture": 95694141,
+        "type": "Rock",
+        "publication": "2017-04-28"
+      },
+      {
+        "id": "1156",
+        "title": "Consectetur.",
+        "artist": "Alejandro Correa",
+        "album": 418,
+        "picture": 85388385,
+        "type": "Classic",
+        "publication": "2017-06-24"
+      }
+  ]
+}
