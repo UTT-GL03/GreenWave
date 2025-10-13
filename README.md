@@ -106,3 +106,10 @@ Par conséquent, pour limiter notre impact écologique, nous pensons à :
 - avoir une régie interne pour compléter les revenus, tout en faisant attention aux publicités diffusées (en accord avec nos valeurs),
 - compléter les revenus avec des contenus exclusifs accessibles via un système de token.
 
+## Ressource et maquettage du service
+
+Les ressources possédants une représentation sur notre service sont de X types:
+- La page d'accueil qui sera le point de chute de tout visiteur (ayant pour URI `/`)
+- Une recherche de titre ou d'album redirigera vers un URI de type `/search?q=music+title`
+- Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
+- Les musique pour finir seront de type `/track?listen={id}`
