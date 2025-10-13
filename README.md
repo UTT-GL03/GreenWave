@@ -114,3 +114,5 @@ Les ressources possédants une représentation sur notre service sont de X types
 - Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
 - Les musiques seront de type `/track?listen={id}`
 - Les artistes seront de type `/artist?profil={id}`
+
+
