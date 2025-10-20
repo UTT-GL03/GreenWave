@@ -1,228 +1,281 @@
 {
   "list": [
       {
-        "id": "61",
-        "title": "Nisl sem.",
-        "artist": "Madelyn Connor",
-        "picture": 23618628,
-        "type": "Rap",
-        "category": "playlist",
-        "publication": "2020-01-01",
-        "musics": [
-          1950,
-          1165,
-          1425
-        ]
-      },
-      {
-        "id": "49",
-        "title": "Posuere.",
-        "artist": "Elaine Pendergast",
-        "picture": 22458518,
-        "type": "Alternative",
-        "category": "album",
-        "publication": "2023-04-20",
-        "musics": [
-          1912,
-          1986,
-          1568,
-          1462,
-          1763
-        ]
-      },
-      {
-        "id": "499",
-        "title": "Elit.",
-        "artist": "Lynetta Milling",
-        "picture": 65125754,
+        "id": "706",
+        "title": "En vehicula ultrices.",
+        "artist": 79,
+        "picture": 35487201,
         "type": "Alternative",
         "category": "playlist",
-        "publication": "2011-07-17",
+        "publication": "2022-09-30",
         "musics": [
-          1216,
-          1634,
-          1098
+          1443,
+          1370,
+          1630,
+          1625
         ]
       },
       {
-        "id": "898",
-        "title": "Sem.",
-        "artist": "Juliana Castleman",
-        "picture": 98763689,
+        "id": "39",
+        "title": "Nulla pretium.",
+        "artist": 993,
+        "picture": 44127832,
         "type": "Classic",
-        "category": "album",
-        "publication": "2023-08-05",
+        "category": "playlist",
+        "publication": "2017-10-17",
         "musics": [
-          1717,
-          1657,
-          1431,
-          1535,
-          1705,
-          1083,
-          1248,
-          1383
+          1449,
+          1208,
+          1082,
+          1752,
+          1654,
+          1755
         ]
       },
       {
-        "id": "189",
-        "title": "En.",
-        "artist": "Austin Pendergast",
-        "picture": 77622530,
-        "type": "Electro",
+        "id": "448",
+        "title": "Purus sed e.",
+        "artist": 172,
+        "picture": 30601650,
+        "type": "Rap",
         "category": "album",
-        "publication": "2024-11-19",
+        "publication": "2019-10-04",
         "musics": [
-          1434,
-          1422,
-          1932,
-          1394
+          1532,
+          1466,
+          1558,
+          1879,
+          1104,
+          1260,
+          1062,
+          1356,
+          1996,
+          1044
         ]
       },
       {
-        "id": "830",
-        "title": "Nisl.",
-        "artist": "Haydee Matzen",
-        "picture": 81918248,
-        "type": "Electro",
-        "category": "album",
-        "publication": "2016-03-05",
+        "id": "179",
+        "title": "Posuere ali.",
+        "artist": 590,
+        "picture": 60612840,
+        "type": "Rock",
+        "category": "playlist",
+        "publication": "2012-09-02",
         "musics": [
-          1893,
-          1429,
-          1517,
-          1925,
-          1333,
-          1313,
-          1855
+          1781,
+          1156,
+          1403
         ]
       },
       {
-        "id": "603",
-        "title": "Ligula ornare tortor.",
-        "artist": "Layla Schaefer",
-        "picture": 50176574,
+        "id": "216",
+        "title": "Risus.",
+        "artist": 281,
+        "picture": 71961569,
+        "type": "Rock",
+        "category": "playlist",
+        "publication": "2013-05-29",
+        "musics": [
+          1697,
+          1844,
+          1792,
+          1775
+        ]
+      },
+      {
+        "id": "408",
+        "title": "Mauris vitae justo.",
+        "artist": 820,
+        "picture": 10473314,
+        "type": "Alternative",
+        "category": "playlist",
+        "publication": "2019-05-03",
+        "musics": [
+          1081,
+          1618,
+          1984,
+          1500,
+          1365,
+          1104,
+          1527,
+          1788,
+          1029
+        ]
+      },
+      {
+        "id": "748",
+        "title": "Mattis.",
+        "artist": 363,
+        "picture": 88318634,
         "type": "Pop",
         "category": "playlist",
-        "publication": "2018-02-19",
+        "publication": "2013-01-26",
         "musics": [
-          1076,
-          1451,
-          1384,
-          1255,
-          1191,
-          1346
+          1273,
+          1480,
+          1976,
+          1019,
+          1412,
+          1316,
+          1911,
+          1476
         ]
       },
       {
-        "id": "831",
-        "title": "Tristique ut mattis.",
-        "artist": "Cecilia Connor",
-        "picture": 15280949,
+        "id": "111",
+        "title": "Nisl.",
+        "artist": 924,
+        "picture": 17210941,
+        "type": "Electro",
+        "category": "album",
+        "publication": "2012-12-02",
+        "musics": [
+          1847,
+          1268,
+          1433,
+          1242,
+          1500,
+          1852,
+          1769,
+          1849
+        ]
+      },
+      {
+        "id": "526",
+        "title": "Bibendum.",
+        "artist": 829,
+        "picture": 72238947,
+        "type": "Electro",
+        "category": "album",
+        "publication": "2013-03-25",
+        "musics": [
+          1635,
+          1352,
+          1371,
+          1752,
+          1670,
+          1610,
+          1353
+        ]
+      },
+      {
+        "id": "889",
+        "title": "Quisque cras maecenas.",
+        "artist": 853,
+        "picture": 74392112,
         "type": "Classic",
         "category": "album",
-        "publication": "2018-04-11",
+        "publication": "2011-03-03",
         "musics": [
-          1394,
-          1750,
-          1856,
-          1358,
-          1087,
-          1385,
-          1046,
-          1094
+          1213,
+          1210,
+          1954,
+          1491,
+          1146
         ]
       }
   ],
   "music" : [
       {
-        "id": "1831",
-        "title": "Euismod auctor.",
-        "artist": "Eleanore Coolidge",
-        "album": 685,
-        "picture": 36806813,
-        "type": "Electro",
-        "publication": "2023-01-15"
-      },
-      {
-        "id": "1085",
-        "title": "Proin sodales enim.",
-        "artist": "Grace Oldman",
-        "album": 25,
-        "picture": 77966196,
-        "type": "Pop",
-        "publication": "2018-12-16"
-      },
-      {
-        "id": "1707",
-        "title": "Proin mi it.",
-        "artist": "Darrell Pendergast",
-        "album": 602,
-        "picture": 56008087,
+        "id": "1226",
+        "title": "Velit dictum.",
+        "artist": 482,
+        "album": 338,
+        "picture": 68779289,
         "type": "Classic",
-        "publication": "2013-06-29"
+        "publication": "2022-03-28"
       },
       {
-        "id": "1425",
-        "title": "Dia cras lum.",
-        "artist": "Miles Lenihan",
-        "album": 680,
-        "picture": 27152386,
-        "type": "Electro",
-        "publication": "2014-04-22"
-      },
-      {
-        "id": "1049",
-        "title": "Pharetra.",
-        "artist": "Emma Fennell",
-        "album": 892,
-        "picture": 38749003,
-        "type": "Electro",
-        "publication": "2010-01-20"
-      },
-      {
-        "id": "1446",
-        "title": "Blandit ornare.",
-        "artist": "Jenna Seal",
-        "album": 543,
-        "picture": 38839440,
-        "type": "Alternative",
-        "publication": "2010-07-31"
-      },
-      {
-        "id": "1494",
-        "title": "Lacus placerat.",
-        "artist": "Gavin Mercer",
-        "album": 554,
-        "picture": 84931117,
+        "id": "1423",
+        "title": "Enim.",
+        "artist": 855,
+        "album": 895,
+        "picture": 25202819,
         "type": "Classic",
-        "publication": "2012-06-01"
+        "publication": "2022-07-27"
       },
       {
-        "id": "1776",
-        "title": "Quis.",
-        "artist": "Rikki Dunham",
-        "album": 862,
-        "picture": 75231845,
+        "id": "1792",
+        "title": "Hendrerit.",
+        "artist": 897,
+        "album": 856,
+        "picture": 63528639,
+        "type": "Classic",
+        "publication": "2024-05-14"
+      },
+      {
+        "id": "1806",
+        "title": "Nisl cit.",
+        "artist": 846,
+        "album": 878,
+        "picture": 71497248,
         "type": "Rock",
-        "publication": "2021-01-28"
+        "publication": "2016-06-15"
       },
       {
-        "id": "1198",
-        "title": "Eu.",
-        "artist": "Andy Brandt",
-        "album": 645,
-        "picture": 95694141,
-        "type": "Rock",
-        "publication": "2017-04-28"
-      },
-      {
-        "id": "1156",
-        "title": "Consectetur.",
-        "artist": "Alejandro Correa",
-        "album": 418,
-        "picture": 85388385,
-        "type": "Classic",
-        "publication": "2017-06-24"
+        "id": "1098",
+        "title": "Condimentum consectetur turpis.",
+        "artist": 87,
+        "album": 228,
+        "picture": 22594134,
+        "type": "Electro",
+        "publication": "2021-11-28"
       }
+  ],
+  "artist": [
+    {
+      "id": 753,
+      "firstName": "Curtis",
+      "lastName": "Higgins",
+      "picture": 80730067
+    },
+    {
+      "id": 365,
+      "firstName": "Roselyn",
+      "lastName": "White",
+      "picture": 89833617
+    },
+    {
+      "id": 775,
+      "firstName": "Yuri",
+      "lastName": "Jensen",
+      "picture": 84719473
+    },
+    {
+      "id": 769,
+      "firstName": "Dori",
+      "lastName": "Leath",
+      "picture": 52971174
+    },
+    {
+      "id": 98,
+      "firstName": "Cory",
+      "lastName": "Sager",
+      "picture": 20760552
+    },
+    {
+      "id": 988,
+      "firstName": "Miles",
+      "lastName": "Tuck",
+      "picture": 81179089
+    },
+    {
+      "id": 677,
+      "firstName": "Victoria",
+      "lastName": "Cadena",
+      "picture": 73220249
+    },
+    {
+      "id": 975,
+      "firstName": "Rikki",
+      "lastName": "Fennell",
+      "picture": 20524203
+    },
+    {
+      "id": 535,
+      "firstName": "Roselyn",
+      "lastName": "Keesee",
+      "picture": 93561933
+    }
   ]
 }
