@@ -2,62 +2,71 @@
   "artist": [
     {
       "id": 0,
-      "firstName": "Gavin",
-      "lastName": "Mullens",
+      "firstName": "Cecilia",
+      "lastName": "Paschall",
       "picture": "https://picsum.photos/seed/artist0/200/200"
-    },
+    }
+    ,
     {
       "id": 1,
-      "firstName": "Max",
-      "lastName": "Karst",
+      "firstName": "Rikki",
+      "lastName": "Jensen",
       "picture": "https://picsum.photos/seed/artist1/200/200"
-    },
+    }
+    ,
     {
       "id": 2,
-      "firstName": "Vaughn",
-      "lastName": "Muldoon",
+      "firstName": "Elaine",
+      "lastName": "Bourquin",
       "picture": "https://picsum.photos/seed/artist2/200/200"
-    },
+    }
+    ,
     {
       "id": 3,
-      "firstName": "Elaine",
-      "lastName": "Starck",
+      "firstName": "Theo",
+      "lastName": "Paquette",
       "picture": "https://picsum.photos/seed/artist3/200/200"
-    },
+    }
+    ,
     {
       "id": 4,
-      "firstName": "Curtis",
-      "lastName": "Latshaw",
+      "firstName": "Raylene",
+      "lastName": "Hottle",
       "picture": "https://picsum.photos/seed/artist4/200/200"
-    },
+    }
+    ,
     {
       "id": 5,
-      "firstName": "Hannah",
-      "lastName": "Backer",
+      "firstName": "Liza",
+      "lastName": "White",
       "picture": "https://picsum.photos/seed/artist5/200/200"
-    },
+    }
+    ,
     {
       "id": 6,
-      "firstName": "Kirstie",
-      "lastName": "Bourquin",
+      "firstName": "Victoria",
+      "lastName": "Remus",
       "picture": "https://picsum.photos/seed/artist6/200/200"
-    },
+    }
+    ,
     {
       "id": 7,
-      "firstName": "Benito",
-      "lastName": "Rikard",
+      "firstName": "Richelle",
+      "lastName": "Latshaw",
       "picture": "https://picsum.photos/seed/artist7/200/200"
-    },
+    }
+    ,
     {
       "id": 8,
-      "firstName": "Raylene",
-      "lastName": "Grieve",
+      "firstName": "Lance",
+      "lastName": "Garling",
       "picture": "https://picsum.photos/seed/artist8/200/200"
-    },
+    }
+    ,
     {
       "id": 9,
-      "firstName": "Alexa",
-      "lastName": "Cadena",
+      "firstName": "Rosanne",
+      "lastName": "Keesee",
       "picture": "https://picsum.photos/seed/artist9/200/200"
     }
   ],
@@ -65,277 +74,308 @@
   "music": [
     {
       "id": 0,
-      "title": "In leo tristique.",
-      "artist": 2,  
-      "album": 0,   
-      "picture": "https://picsum.photos/seed/music44841/200/200",
-      "type": "Rap",
-      "publication": "2011-11-21",
-      "audio": "./assets/music/mixkit-tech-house-vibes-130.mp3"
-    },
+      "title": "Facilisis pharetra.",
+      "artist": 4,
+      "album": 2,
+      "picture": "https://picsum.photos/seed/music91645/200/200",
+      "type": "Electro",
+      "publication": "2018-09-14",
+      "audio": "/audio/mixkit-hip-hop-02-738.mp3"
+    }
+    ,
     {
       "id": 1,
-      "title": "Faucibus orci facilisis.",
-      "artist": 0,  
-      "album": 2,   
-      "picture": "https://picsum.photos/seed/music49298/200/200",
-      "type": "Electro",
-      "publication": "2024-12-09",
-      "audio": "./assets/music/mixkit-sun-and-his-daughter-580.mp3"
-    },
+      "title": "Sit pulvinar.",
+      "artist": 5,
+      "album": 3,
+      "picture": "https://picsum.photos/seed/music51915/200/200",
+      "type": "Rock",
+      "publication": "2022-12-10",
+      "audio": "/audio/mixkit-sun-and-his-daughter-580.mp3"
+    }
+    ,
     {
       "id": 2,
-      "title": "Auctor.",
-      "artist": 1,  
-      "album": 3,   
-      "picture": "https://picsum.photos/seed/music31549/200/200",
-      "type": "Classic",
-      "publication": "2010-01-11",
-      "audio": "./assets/music/mixkit-a-very-happy-christmas-897.mp3"
-    },
+      "title": "Quisque non lorem.",
+      "artist": 8,
+      "album": 1,
+      "picture": "https://picsum.photos/seed/music50918/200/200",
+      "type": "Pop",
+      "publication": "2016-12-29",
+      "audio": "/audio/mixkit-tech-house-vibes-130.mp3"
+    }
+    ,
     {
       "id": 3,
-      "title": "Quis e.",
-      "artist": 7,  
-      "album": 1,   
-      "picture": "https://picsum.photos/seed/music79781/200/200",
-      "type": "Classic",
-      "publication": "2021-03-07",
-      "audio": "./assets/music/mixkit-deep-urban-623.mp3"
-    },
+      "title": "Mattis ex sodales.",
+      "artist": 2,
+      "album": 2,
+      "picture": "https://picsum.photos/seed/music70752/200/200",
+      "type": "Pop",
+      "publication": "2012-07-16",
+      "audio": "/audio/mixkit-a-very-happy-christmas-897.mp3"
+    }
+    ,
     {
       "id": 4,
-      "title": "Quis porttitor.",
-      "artist": 2,  
-      "album": 2,   
-      "picture": "https://picsum.photos/seed/music11675/200/200",
-      "type": "Classic",
-      "publication": "2013-08-19",
-      "audio": "./assets/music/mixkit-hip-hop-02-738.mp3"
-    },
+      "title": "Commodo mi.",
+      "artist": 6,
+      "album": 4,
+      "picture": "https://picsum.photos/seed/music94787/200/200",
+      "type": "Electro",
+      "publication": "2013-08-03",
+      "audio": "/audio/mixkit-beautiful-dream-493.mp3"
+    }
+    ,
     {
       "id": 5,
-      "title": "Diam tortor lobortis.",
-      "artist": 8,  
-      "album": 3,   
-      "picture": "https://picsum.photos/seed/music51415/200/200",
-      "type": "Classic",
-      "publication": "2016-04-07",
-      "audio": "./assets/music/mixkit-sun-and-his-daughter-580.mp3"
-    },
+      "title": "Tortor con ligula.",
+      "artist": 9,
+      "album": 2,
+      "picture": "https://picsum.photos/seed/music47909/200/200",
+      "type": "Rock",
+      "publication": "2016-01-15",
+      "audio": "/audio/mixkit-deep-urban-623.mp3"
+    }
+    ,
     {
       "id": 6,
-      "title": "Quisque.",
-      "artist": 7,  
-      "album": 2,   
-      "picture": "https://picsum.photos/seed/music90237/200/200",
-      "type": "Pop",
-      "publication": "2021-08-03",
-      "audio": "./assets/music/mixkit-serene-view-443.mp3"
-    },
+      "title": "El pulvinar dia.",
+      "artist": 9,
+      "album": 0,
+      "picture": "https://picsum.photos/seed/music92643/200/200",
+      "type": "Alternative",
+      "publication": "2019-05-04",
+      "audio": "/audio/mixkit-beautiful-dream-493.mp3"
+    }
+    ,
     {
       "id": 7,
-      "title": "In.",
-      "artist": 1,  
-      "album": 3,   
-      "picture": "https://picsum.photos/seed/music49438/200/200",
-      "type": "Alternative",
-      "publication": "2024-08-17",
-      "audio": "./assets/music/mixkit-tech-house-vibes-130.mp3"
-    },
+      "title": "Sollicitudin neque.",
+      "artist": 1,
+      "album": 0,
+      "picture": "https://picsum.photos/seed/music90526/200/200",
+      "type": "Electro",
+      "publication": "2011-06-22",
+      "audio": "/audio/mixkit-deep-urban-623.mp3"
+    }
+    ,
     {
       "id": 8,
-      "title": "Suscipit dictum.",
-      "artist": 8,  
-      "album": 1,   
-      "picture": "https://picsum.photos/seed/music69926/200/200",
-      "type": "Rock",
-      "publication": "2013-01-11",
-      "audio": "./assets/music/mixkit-deep-urban-623.mp3"
-    },
+      "title": "Fringilla it.",
+      "artist": 2,
+      "album": 2,
+      "picture": "https://picsum.photos/seed/music88209/200/200",
+      "type": "Alternative",
+      "publication": "2011-06-23",
+      "audio": "/audio/mixkit-driving-ambition-32.mp3"
+    }
+    ,
     {
       "id": 9,
-      "title": "Sagittis ac non.",
-      "artist": 0,  
-      "album": 2,   
-      "picture": "https://picsum.photos/seed/music62137/200/200",
-      "type": "Classic",
-      "publication": "2010-05-10",
-      "audio": "./assets/music/mixkit-beautiful-dream-493.mp3"
-    },
+      "title": "Aliquet nulla imperdiet.",
+      "artist": 1,
+      "album": 1,
+      "picture": "https://picsum.photos/seed/music71304/200/200",
+      "type": "Rap",
+      "publication": "2014-11-11",
+      "audio": "/audio/mixkit-hip-hop-02-738.mp3"
+    }
+    ,
     {
       "id": 10,
-      "title": "Eros mollis.",
-      "artist": 1,  
-      "album": 4,   
-      "picture": "https://picsum.photos/seed/music20872/200/200",
-      "type": "Pop",
-      "publication": "2012-03-08",
-      "audio": "./assets/music/mixkit-a-very-happy-christmas-897.mp3"
-    },
+      "title": "Proin lacinia.",
+      "artist": 4,
+      "album": 1,
+      "picture": "https://picsum.photos/seed/music45563/200/200",
+      "type": "Rap",
+      "publication": "2021-08-15",
+      "audio": "/audio/mixkit-sun-and-his-daughter-580.mp3"
+    }
+    ,
     {
       "id": 11,
-      "title": "Vel lacinia eros.",
-      "artist": 1,  
-      "album": 4,   
-      "picture": "https://picsum.photos/seed/music42411/200/200",
-      "type": "Rock",
-      "publication": "2014-06-16",
-      "audio": "./assets/music/mixkit-hip-hop-02-738.mp3"
-    },
+      "title": "Et suscipit dictum.",
+      "artist": 6,
+      "album": 2,
+      "picture": "https://picsum.photos/seed/music53711/200/200",
+      "type": "Rap",
+      "publication": "2018-12-15",
+      "audio": "/audio/mixkit-driving-ambition-32.mp3"
+    }
+    ,
     {
       "id": 12,
-      "title": "Ex.",
-      "artist": 9,  
-      "album": 0,   
-      "picture": "https://picsum.photos/seed/music38437/200/200",
-      "type": "Electro",
-      "publication": "2013-11-02",
-      "audio": "./assets/music/mixkit-a-very-happy-christmas-897.mp3"
-    },
+      "title": "Lacus non.",
+      "artist": 3,
+      "album": 4,
+      "picture": "https://picsum.photos/seed/music20175/200/200",
+      "type": "Rock",
+      "publication": "2015-09-19",
+      "audio": "/audio/mixkit-deep-urban-623.mp3"
+    }
+    ,
     {
       "id": 13,
-      "title": "Elementum elementum.",
-      "artist": 7,  
-      "album": 0,   
-      "picture": "https://picsum.photos/seed/music34451/200/200",
+      "title": "Neque enim.",
+      "artist": 2,
+      "album": 4,
+      "picture": "https://picsum.photos/seed/music81694/200/200",
       "type": "Classic",
-      "publication": "2012-01-08",
-      "audio": "./assets/music/mixkit-silent-descent-614.mp3"
-    },
+      "publication": "2014-06-10",
+      "audio": "/audio/mixkit-a-very-happy-christmas-897.mp3"
+    }
+    ,
     {
       "id": 14,
-      "title": "Eti faucibus.",
-      "artist": 1,  
-      "album": 3,   
-      "picture": "https://picsum.photos/seed/music88026/200/200",
-      "type": "Rock",
-      "publication": "2020-06-16",
-      "audio": "./assets/music/mixkit-driving-ambition-32.mp3"
-    },
+      "title": "Lacus cras i.",
+      "artist": 2,
+      "album": 2,
+      "picture": "https://picsum.photos/seed/music70643/200/200",
+      "type": "Rap",
+      "publication": "2015-11-04",
+      "audio": "/audio/mixkit-driving-ambition-32.mp3"
+    }
+    ,
     {
       "id": 15,
-      "title": "Dignissim quisque.",
-      "artist": 6,  
-      "album": 4,   
-      "picture": "https://picsum.photos/seed/music88299/200/200",
-      "type": "Electro",
-      "publication": "2011-08-21",
-      "audio": "./assets/music/mixkit-hazy-after-hours-132.mp3"
-    },
+      "title": "Mi ac.",
+      "artist": 6,
+      "album": 3,
+      "picture": "https://picsum.photos/seed/music98727/200/200",
+      "type": "Rap",
+      "publication": "2012-05-03",
+      "audio": "/audio/mixkit-sun-and-his-daughter-580.mp3"
+    }
+    ,
     {
       "id": 16,
-      "title": "Tempus mollis.",
-      "artist": 8,  
-      "album": 0,   
-      "picture": "https://picsum.photos/seed/music37558/200/200",
+      "title": "Ornare gravida.",
+      "artist": 2,
+      "album": 4,
+      "picture": "https://picsum.photos/seed/music30781/200/200",
       "type": "Pop",
-      "publication": "2012-05-04",
-      "audio": "./assets/music/mixkit-deep-urban-623.mp3"
-    },
+      "publication": "2022-01-17",
+      "audio": "/audio/mixkit-hip-hop-02-738.mp3"
+    }
+    ,
     {
       "id": 17,
-      "title": "En.",
-      "artist": 8,  
-      "album": 3,   
-      "picture": "https://picsum.photos/seed/music90656/200/200",
+      "title": "Velit pulvinar.",
+      "artist": 9,
+      "album": 1,
+      "picture": "https://picsum.photos/seed/music97486/200/200",
       "type": "Classic",
-      "publication": "2014-06-12",
-      "audio": "./assets/music/mixkit-hip-hop-02-738.mp3"
-    },
+      "publication": "2018-08-16",
+      "audio": "/audio/mixkit-hip-hop-02-738.mp3"
+    }
+    ,
     {
       "id": 18,
-      "title": "Pulvinar tempor pulvinar.",
-      "artist": 9,  
-      "album": 0,   
-      "picture": "https://picsum.photos/seed/music20270/200/200",
-      "type": "Classic",
-      "publication": "2015-07-19",
-      "audio": "./assets/music/mixkit-hazy-after-hours-132.mp3"
-    },
+      "title": "En elit ac.",
+      "artist": 6,
+      "album": 3,
+      "picture": "https://picsum.photos/seed/music72568/200/200",
+      "type": "Rap",
+      "publication": "2011-02-01",
+      "audio": "/audio/mixkit-a-very-happy-christmas-897.mp3"
+    }
+    ,
     {
       "id": 19,
-      "title": "Sodales.",
-      "artist": 4,  
-      "album": 4,   
-      "picture": "https://picsum.photos/seed/music18756/200/200",
-      "type": "Alternative",
-      "publication": "2010-09-17",
-      "audio": "./assets/music/mixkit-serene-view-443.mp3"
+      "title": "Suscipit etiam felis.",
+      "artist": 0,
+      "album": 3,
+      "picture": "https://picsum.photos/seed/music13379/200/200",
+      "type": "Pop",
+      "publication": "2024-07-16",
+      "audio": "/audio/mixkit-sun-and-his-daughter-580.mp3"
     }
   ],
 
   "list": [
     {
       "id": 0,
-      "title": "Mi mollis at.",
-      "artist": 5,  
+      "title": "Cursus gravida ut.",
+      "artist": 0,
       "picture": "https://picsum.photos/seed/list0/300/300",
       "type": "album",
-      "publication": "2016-10-24",
+      "publication": "2023-05-28",
       "musics": [
-          4,
-          6,
+          14,
+          15,
+          7,
           1,
-          18,
-          12
+          18
       ]
-    },
+    }
+    ,
     {
       "id": 1,
-      "title": "Curabitur.",
-      "artist": 2,  
+      "title": "Non magna.",
+      "artist": 2,
       "picture": "https://picsum.photos/seed/list1/300/300",
       "type": "playlist",
-      "publication": "2016-04-29",
+      "publication": "2010-11-19",
       "musics": [
+          0,
           8,
-          2,
-          13
+          3,
+          5,
+          0,
+          12,
+          14
       ]
-    },
+    }
+    ,
     {
       "id": 2,
-      "title": "Vel ex metus.",
-      "artist": 8,  
+      "title": "Mi lacinia.",
+      "artist": 9,
       "picture": "https://picsum.photos/seed/list2/300/300",
       "type": "playlist",
-      "publication": "2024-09-08",
+      "publication": "2013-08-03",
       "musics": [
+          9,
+          12,
           10,
-          15,
-          14,
-          17,
-          16
+          4,
+          10
       ]
-    },
+    }
+    ,
     {
       "id": 3,
-      "title": "Morbi diam.",
-      "artist": 7,  
+      "title": "Aenean elit.",
+      "artist": 5,
       "picture": "https://picsum.photos/seed/list3/300/300",
       "type": "album",
-      "publication": "2013-09-22",
+      "publication": "2022-07-29",
       "musics": [
+          13,
+          18,
+          17,
+          9,
           14,
-          16,
-          15,
-          5,
-          16
+          11,
+          9
       ]
-    },
+    }
+    ,
     {
       "id": 4,
-      "title": "Pellentesque.",
-      "artist": 7,  
+      "title": "Elit dolor nulla.",
+      "artist": 4,
       "picture": "https://picsum.photos/seed/list4/300/300",
-      "type": "album",
-      "publication": "2010-06-26",
+      "type": "playlist",
+      "publication": "2012-08-03",
       "musics": [
+          13,
+          2,
+          7,
+          16,
           15,
-          15,
-          19,
-          19
+          8
       ]
     }
   ]
