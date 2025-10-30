@@ -119,25 +119,25 @@ Les ressources possédants une représentation sur notre service sont de 5 types
 
 - La page d'accueil qui sera le point de chute de tout visiteur (ayant pour URI `/`)
   
-  <img src="./frontend/mockup/homepage.png" width="500" alt="Maquette de la page d'accueil" />
+  <img src="./docs/mockup/homepage.png" width="500" alt="Maquette de la page d'accueil" />
   
   **Fig. 1** : Maquette de la page d'accueil
   
 - Une recherche de titre ou d'album redirigera vers un URI de type `/search?q=music+title`
   
-  <img src="./frontend/mockup/searchpage.png" width="500" alt="Maquette de la page des résultats d'une recherche" />
+  <img src="./docs/mockup/searchpage.png" width="500" alt="Maquette de la page des résultats d'une recherche" />
   
   **Fig. 2** : Maquette de la page des résultats d'une recherche
   
 - Les albums et playlist sont des regroupement de musiques ils auront pour URI `/album?list={id}` et `/playlist?list={id}`
   
-  <img src="./frontend/mockup/listpage.png" width="500" alt="Maquette de la page d'une liste de titres" />
+  <img src="./docs/mockup/listpage.png" width="500" alt="Maquette de la page d'une liste de titres" />
   
   **Fig. 3** : Maquette de la page d'une liste de titres
   
 - Les musiques seront de type `/track?listen={id}`
   
-  <img src="./frontend/mockup/trackpage.png" width="500" alt="Maquette de la page d'un titres" />
+  <img src="./docs/mockup/trackpage.png" width="500" alt="Maquette de la page d'un titres" />
   
   **Fig. 4** : Maquette de la page d'un titres
   
@@ -185,7 +185,7 @@ Les résultats montrent déjà un impact très faible, notamment grâce à la mi
 | Développement | 79 B 🟠 | 58 | 91 | 96 
 | Pré-production | 91 A 🟢 | 100 | 91 | 96 
 
-<img src="./frontend/screenshot/Mainpage.png" width="500" alt="Capture d'écran de la page d'acceuil" />
+<img src="./docs/screenshot/Mainpage.png" width="500" alt="Capture d'écran de la page d'acceuil" />
 
 **Tab.2** : Évaluation de l’impact du prototype de la page d’accueil
 
