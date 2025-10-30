@@ -153,3 +153,40 @@ Le modèle de données comprend deux grand type d'item, les `music` et les `list
 - `artist`
 - `picture`
 - etc...
+
+## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
+### Objectif
+Cette première version du prototype a pour but de valider le scénario prioritaire :  
+> « Lire des articles parmi les articles du jour »
+
+Les données sont encore chargées de manière statique, et seules les fonctionnalités nécessaires à ce scénario ont été implémentées.
+
+### Page d'acceuil
+
+La page d'acceuil affiche des musiques aléatoires à partir d’un échantillon de données statiques, sous une forme proche de la maquette initiale.
+
+Nous utilisons actuellement un framework CSS minimaliste : [PicoCSS](https://picocss.com/).  
+Son empreinte est faible, ce qui en fait un bon candidat pour le prototype.  
+Une évaluation ultérieure permettra de déterminer si l’adoption d’un framework plus complet (comme Bootstrap) est acceptable d’un point de vue environnemental.
+
+### Choix de conception
+- Choix d'image de basse résolutions pour les pochettes de musiques, bien que les photos sont demandantes en ressources, les pochettes d'album font parties de leur identité
+- Tendre vers le minimaliste en affichant le moins de données possible 
+
+
+### Évaluation de l’impact environnemental du frontend
+
+Même si les données ne sont pas encore chargées dynamiquement, nous avons pu mesurer l’impact du rendu des données statiques et de la pile technique actuelle (React, PicoCSS, DayJS).
+
+Les résultats montrent déjà un impact très faible, notamment grâce à la minification et à la concaténation automatique du code et des feuilles de style en mode pré-production.
+
+| Mode | EcoIndex | Performance | Accessibilité | Bonnes pratiques 
+|------|----------|-------------|---------------|-----------------
+| Développement | 79 B 🟠 | 58 | 91 | 96 
+| Pré-production | 91 A 🟢 | 100 | 91 | 96 
+
+<img src="./frontend/screenshot/Mainpage.png" width="500" alt="Capture d'écran de la page d'acceuil" />
+
+**Tab.2** : Évaluation de l’impact du prototype de la page d’accueil
+
+
