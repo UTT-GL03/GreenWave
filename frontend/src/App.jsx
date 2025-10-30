@@ -2,6 +2,7 @@ import './App.css'
 import data from './assets/sample_data.json'
 import { Link, Routes, Route } from "react-router-dom";
 import Detail from './Detail';
+import placeholder from './assets/placeholderimg.png';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
                 to={`/detail/${index}`} 
               >
                 <article className="music-card">
-                  <img src={music.picture} alt={music.title}/>
+                  {/* <img src={music.picture} alt={music.title}/> */}
+                  <img src={placeholder} alt={music.title}/>
                   <p>{music.title}</p>
                   <p>
                     {data.artist[music.artist] 

@@ -2,7 +2,8 @@ import './Detail.css'
 import { useParams } from "react-router-dom";
 import { usePlayer } from "./PlayerContext";
 import data from './assets/sample_data.json'
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
+import placeholder from './assets/placeholderimg.png';
 
 function Detail() {
     const { id } = useParams();
@@ -18,7 +19,8 @@ function Detail() {
     return (
         <div className="music-detail">
             <h2>{music.title}</h2>
-            <img src={music.picture} alt={music.title} />
+            {/* <img src={music.picture} alt={music.title} /> */}
+            <img src={placeholder} alt={music.title} />
             <p>Released on : {dayjs(music.publication).format('DD MMMM YYYY')}</p>
             <p>
                 {data.artist[music.artist]

@@ -8,11 +8,11 @@ function Nav() {
         <nav className=''>
           <Link to="/" className=''>
             <div>
-              <img src={placeholder} className="placeholder" />
+              <img src={placeholder} className="placeholder" alt='placeholder' />
               <p>GreenWave</p>
             </div>
           </Link>
-          <input type='text' />
+          <input type='text' name='searchBar' />
           <a href=''>Compte</a>
         </nav>
       </header>
