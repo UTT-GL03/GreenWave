@@ -29,7 +29,7 @@ C'est ainsi que nous avons conçus deux scénarios, un où le lecteur sélection
 
 De plus, dans nos scénario, nous effectuons le geste deux fois en repassant par la page d'accueil pour mesurer l'optimisation de la mise en cache, vérifier que l'on ne re-télécharge pas certaines informations déjà consulté.
 
-## Scénario : "Lance des playlists depuis l'accueil"
+## Scénario : "Lance des playlists/musiques depuis l'accueil"
 
 1. L'utilisateur se rend sur la page d'accueil, sélectionne un album à écouter et clique dessus
 2. Il lance l'écoute de cet album
@@ -157,7 +157,7 @@ Le modèle de données comprend deux grand type d'item, les `music` et les `list
 ## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
 ### Objectif
 Cette première version du prototype a pour but de valider le scénario prioritaire :  
-> « Lire des articles parmi les articles du jour »
+> « Lance des playlists/musiques depuis l'accueil »
 
 Les données sont encore chargées de manière statique, et seules les fonctionnalités nécessaires à ce scénario ont été implémentées.
 
@@ -180,13 +180,34 @@ Même si les données ne sont pas encore chargées dynamiquement, nous avons pu 
 
 Les résultats montrent déjà un impact très faible, notamment grâce à la minification et à la concaténation automatique du code et des feuilles de style en mode pré-production.
 
-| Mode | EcoIndex | Performance | Accessibilité | Bonnes pratiques 
-|------|----------|-------------|---------------|-----------------
-| Développement | 79 B 🟠 | 58 | 91 | 96 
-| Pré-production | 91 A 🟢 | 100 | 91 | 96 
+| Mode | EcoIndex | Performance | Accessibilité | Bonnes pratiques | Taille du DOM | Requêtes | Taille de la page (ko)
+|------|----------|-------------|---------------|------------------|---------------|----------|-----------------------|
+| Développement | 79 B 🟠 | 58 | 91 | 96 | 130 | 31 | 3.1
+| Pré-production | 91 A 🟢 | 100 | 91 | 96 | 123 | 6 | 0.7
 
 <img src="./docs/screenshot/Mainpage.png" width="500" alt="Capture d'écran de la page d'acceuil" />
 
 **Tab.2** : Évaluation de l’impact du prototype de la page d’accueil
+
+### Pages d'un titre de musique
+
+Les pages des musiques ont pour HTTP-URI `/{id-music}`.
+Nous implémentons maintenant la page des musiques, pour cela nous nous bason le plus fidèlement à notre maquette avec la pochette de la musique avec ses informations disposées succintement.
+
+<img src="./docs/screenshot/Musicpage" width="500" alt="Capture d'écran de la page d'une mmusique" />
+__Fig.3__: Prototype de la page d'une musique.
+
+Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario principal et donc mesuer son impact. Pour cela nous effectuons de nouveau le même protocole avec EcoIndex.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les musique					                          | 89 A🟢 | 1,2 | 166 | 4 | 102
+| 2. Choisir une musique et la charger 			                  | 95 A🟢 | 1,1 |  31 | 4 | 102
+| 3. Revenir à la page d'acceuil et choisir une autre musique	| 89 A🟢 | 1,2 | 166 | 4 | 102
+| 4. Lancer cette musique                                     | 95 A🟢 |  1,1|  29 | 4 | 102
+
+__Tab.2__: Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
+
+Conclusion
 
 
