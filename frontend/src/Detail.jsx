@@ -21,13 +21,11 @@ function Detail() {
             .catch(err => console.error("Erreur de chargement :", err));
     }, []);
 
-    // 👉 Attendre que le JSON soit chargé avant d'accéder à "music"
     if (!data) return <p>Loading...</p>;
 
     const music = data.music[id];
 
-    // 👉 Vérifie si la musique existe
-    if (!music) return <p>This music was not found 😢</p>;
+    if (!music) return <p>This music was not found</p>;
 
     const handlePlay = () => {
         playMusic(music);

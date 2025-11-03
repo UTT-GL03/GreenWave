@@ -22,9 +22,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 35px;
-  margin: 0 55px;
+  margin: 0 55px 130px 55px;
 }
-
 .music-card {
   display: flex;
   flex-direction: column;
