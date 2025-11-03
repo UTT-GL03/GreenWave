@@ -201,10 +201,10 @@ Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario prin
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| 1. Consulter les musique					                          | 79 B🟠 | 1,43 | 113 | 28 | 1 798
-| 2. Choisir une musique et la charger 			                  | 94 A🟢 | 1,12 |  20 | 19 | 4
-| 3. Revenir à la page d'acceuil et choisir une autre musique	| 89 A🟢 | 1,22 | 113 | 19 | 4
-| 4. Lancer cette musique                                     | 94 A🟢 | 1,12 |  20 | 19 | 4
+| 1. Consulter les musique					                          | 91 A🟢 | 1,19 | 112 | 4 | 98
+| 2. Choisir une musique et la charger 			                  | 96 A🟢 | 1,07 |  19 | 4 | 1
+| 3. Revenir à la page d'acceuil et choisir une autre musique	| 91 A🟢 | 1,18 | 112 | 4 | 1
+| 4. Lancer cette musique                                     | 96 A🟢 | 1,07 |  19 | 4 | 1
 
 __Tab.2__: Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
 
