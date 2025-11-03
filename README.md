@@ -208,6 +208,9 @@ Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario prin
 
 __Tab.2__: Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
 
-Conclusion
+Ce premier prototype de GreenWave valide avec succès le scénario prioritaire ("lancer des playlists/musiques depuis l’accueil") tout en confirmant la faible empreinte environnementale de la solution.
+Grâce à des choix techniques sobres — chargement statique des données, optimisation du code, et usage d’un framework léger (PicoCSS) —, le service atteint des scores EcoIndex entre 91 et 96 (classe A 🟢), indiquant un site très économe en ressources.
+
+Ces résultats démontrent qu’il est possible de proposer une expérience fluide et esthétique tout en limitant drastiquement les émissions de CO₂ et le volume de données transférées.
 
 
