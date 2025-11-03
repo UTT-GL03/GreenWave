@@ -194,7 +194,7 @@ Les résultats montrent déjà un impact très faible, notamment grâce à la mi
 Les pages des musiques ont pour HTTP-URI `/{id-music}`.
 Nous implémentons maintenant la page des musiques, pour cela nous nous bason le plus fidèlement à notre maquette avec la pochette de la musique avec ses informations disposées succintement.
 
-<img src="./docs/screenshot/Musicpage" width="500" alt="Capture d'écran de la page d'une mmusique" />
+<img src="./docs/screenshot/Musicpage.png" width="500" alt="Capture d'écran de la page d'une musique" />
 __Fig.3__: Prototype de la page d'une musique.
 
 Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario principal et donc mesuer son impact. Pour cela nous effectuons de nouveau le même protocole avec EcoIndex.
