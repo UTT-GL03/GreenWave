@@ -213,4 +213,10 @@ Grâce à des choix techniques sobres — chargement statique des données, opti
 
 Ces résultats démontrent qu’il est possible de proposer une expérience fluide et esthétique tout en limitant drastiquement les émissions de CO₂ et le volume de données transférées.
 
+## Prototype n°2 : Données statiques chargées de manière dynamique
+
+Ce prototype charge maintenant les données de manière dynamiques, c'est à dire qu'elle sont chargées par le frontend par le réseau (accessible par HTTP). Cela ne change donc pas les fontionnalités mais se rapproche d'un mécanisme plus réel.
+
+Quant a l'évolution de l'impact environnemental sur le scénario prioritaire déjà testé (cf Tab.2) aucun changement majeur est à noter. Seul le nombre de requête est augmenté de 2 ou 3 (sur une base de 4).
+
 
