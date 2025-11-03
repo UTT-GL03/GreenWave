@@ -1,16 +1,25 @@
 import { useState, useEffect } from "react";
 import "./Player.css";
-import data from "./assets/sample_data.json";
+//import data from "./assets/sample_data.json";
 import { usePlayer } from "./PlayerContext";
+
+
 
 const resolveAudioSrc = (src) => {
   if (!src) return "";
   if (src.startsWith("/") || src.startsWith("http")) return src;
-  try { return new URL(src, import.meta.url).href; } 
+  try { return new URL(src, import.meta.url).href; }
   catch { return src; }
 };
 
 export default function Player() {
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    fetch('/sample_data.json')
+      .then(x => x.json())
+      .then(dataJson => setData(dataJson))
+  }, [])
   const { currentMusic, isPlaying, setIsPlaying, audioRef } = usePlayer();
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
@@ -57,39 +66,45 @@ export default function Player() {
     if (audioRef.current) audioRef.current.volume = val;
   };
 
-  if (!currentMusic) 
+  if (!currentMusic)
     return <footer className="player"><p style={{ color: "white", padding: "1rem" }}>No song selected</p></footer>;
 
   return (
-    <footer className="player">
-      <div className="player-left">
-        <img src={currentMusic.picture} alt={currentMusic.title} />
-        <div>
-          <p className="title">{currentMusic.title || "—"}</p>
-          <p className="artist">
-            {data.artist?.[currentMusic.artist]
-              ? `${data.artist[currentMusic.artist].firstName} ${data.artist[currentMusic.artist].lastName}`
-              : "Unknown artist"}
-          </p>
-        </div>
-      </div>
-
-      <div className="player-center">
-        <div className="player-controls">
-          <button onClick={togglePlay}>{isPlaying ? "⏸️" : "▶️"}</button>
-          <div className="progress-bar" onClick={handleSeek} role="progressbar" aria-valuenow={Math.round(progress)}>
-            <div className="progress" style={{ width: `${progress}%` }}></div>
+    <>
+      {!data ? (
+        <p>Loading...</p>
+      ) : (
+        <footer className="player">
+          <div className="player-left">
+            <img src={currentMusic.picture} alt={currentMusic.title} />
+            <div>
+              <p className="title">{currentMusic.title || "—"}</p>
+              <p className="artist">
+                {data.artist?.[currentMusic.artist]
+                  ? `${data.artist[currentMusic.artist].firstName} ${data.artist[currentMusic.artist].lastName}`
+                  : "Unknown artist"}
+              </p>
+            </div>
           </div>
-        </div>
-        {loadError && <div className="load-error">{loadError}</div>}
-      </div>
 
-      <div className="player-right">
-        <span>🔊</span>
-        <input type="range" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} />
-      </div>
+          <div className="player-center">
+            <div className="player-controls">
+              <button onClick={togglePlay}>{isPlaying ? "⏸️" : "▶️"}</button>
+              <div className="progress-bar" onClick={handleSeek} role="progressbar" aria-valuenow={Math.round(progress)}>
+                <div className="progress" style={{ width: `${progress}%` }}></div>
+              </div>
+            </div>
+            {loadError && <div className="load-error">{loadError}</div>}
+          </div>
 
-      <audio ref={audioRef} onTimeUpdate={handleTimeUpdate} onEnded={() => setIsPlaying(false)} />
-    </footer>
+          <div className="player-right">
+            <span>🔊</span>
+            <input type="range" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} />
+          </div>
+
+          <audio ref={audioRef} onTimeUpdate={handleTimeUpdate} onEnded={() => setIsPlaying(false)} />
+        </footer>
+      )}
+    </>
   );
 }
