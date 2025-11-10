@@ -21,7 +21,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div>
+            <>
               {!data ? (
                 <p>Loading...</p>
               ) : (
@@ -42,7 +42,7 @@ function App() {
                   ))}
                 </div>
               )}
-            </div>
+            </>
           }
         />
 

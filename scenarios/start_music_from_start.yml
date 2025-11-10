@@ -1,0 +1,28 @@
+# To be used with GreenIT Analysis CLI
+- name: Lancer une musique depuis l'écran d'accueil
+  url: http://localhost/
+  waitForSelector: .grid
+  actions:
+    - name: Consulter les musiques
+      type: scroll
+    - name: Choisir une musique
+      type: click
+      element: .list-music:nth-child(1) > a
+      pageChange: true
+      waitForSelector: .music-detail > button
+    - name: Lancer la musique
+      type: click
+      element: .music-detail > button
+    - name: Retourner à l'accueil
+      type: click
+      element: header > nav > a
+      pageChange: true
+      waitForSelector: .list-music
+    - name: Choisir une autre musique
+      type: click
+      element: .list-music:nth-child(2) > a
+      pageChange: true
+      waitForSelector: .music-detail > button
+    - name: Lancer l'autre musique
+      type: click
+      element: .music-detail > button
