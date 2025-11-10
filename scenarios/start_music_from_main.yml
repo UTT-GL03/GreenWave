@@ -1,5 +1,5 @@
 # To be used with GreenIT Analysis CLI
-- name: Lancer une musique depuis l'écran d'accueil
+- name: Consulter des musiques
   url: http://localhost/
   waitForSelector: .list-music
   actions:
