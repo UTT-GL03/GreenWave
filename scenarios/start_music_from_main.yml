@@ -3,8 +3,6 @@
   url: http://localhost/
   waitForSelector: .list-music
   actions:
-    - name: Consulter les musiques
-      type: scroll
     - name: Choisir une musique
       type: click
       element: .list-music > a:nth-child(1)
