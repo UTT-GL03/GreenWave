@@ -7,7 +7,7 @@
       type: scroll
     - name: Choisir une musique
       type: click
-      element: .list-music:nth-child(1) > a
+      element: .list-music > a:nth-child(1)
       pageChange: true
       waitForSelector: .music-detail > button
     - name: Lancer la musique
@@ -20,7 +20,7 @@
       waitForSelector: .list-music
     - name: Choisir une autre musique
       type: click
-      element: .list-music:nth-child(2) > a
+      element: .list-music > a:nth-child(2)
       pageChange: true
       waitForSelector: .music-detail > button
     - name: Lancer l'autre musique
