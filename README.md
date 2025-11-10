@@ -229,13 +229,13 @@ Avec un prototype fonctionnel, nous pouvons simuler un "passage à l'échelle" q
 
 Nous pouvons imaginer que le nombre de musique et d'artiste stockés dans l'application viendra directement de sa popularité. Si des artistes connus ou en masse viennent sur l'application, les utilisteurs suivront et donc ne prendrons qu'un abonnement pour accéder à toutes leurs musiques préférées. Le reste des artistes devront aussi suivre et migrer vers notre application, faisant ainsi augmenter le nombre de données. C'est un cercle vertueux.
 
-Prenons l'exemple d'un artiste très connu utilisant le service, l'arrivée de 500 artistes est probable, apportant chacun 5 musiques, pour arriver à une base de données de 2000 musiques.
+Prenons l'exemple d'un artiste très connu utilisant le service, l'arrivée de 500 artistes est probable, apportant chacun 5 musiques, pour arriver à une base de données de 2 000 musiques.
 Nous multiplions donc par 100 la base de données de notre service.
 
 ### Évolution de l'EcoIndex lors du passage à l'échelle
 
 Maintenant que nous avons ajouté à l'intégration continue l'analyse de l'impact environnemental de notre scénario principal. Nous pouvons récolter et consulter les mesures nécessaires à la production de l'EcoIndex, [avant](https://github.com/UTT-GL03/GreenWave/actions/runs/19234861546) et [après](https://github.com/UTT-GL03/GreenWave/actions/runs/19236074108).
-Le passage à l'échelle montre bien l'augmentation du DOM de la page passant de 121 à 10021 ainsi que le poid de la page passant de 365 Ko à 1957 Ko à l'ouverture.
+Le passage à l'échelle montre bien l'augmentation du DOM de la page passant de 121 à 10 021 ainsi que le poid de la page passant de 365 Ko à 1 957 Ko à l'ouverture.
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
