@@ -85,6 +85,8 @@ Tab2. Modèles économiques des leaders du streaming musical
 | Publicité        | 0.01€ (en moyenne) [[4](#note-cpm)] |                                                370 300 |                                                  3 500 000 |      ✔️ |          ❌ |            ✔️ |        ✔️ |
 | Token            |               5€ [[5](#note-token)] |                                                    746 |                                                      7 000 |      ❌ |          ❌ |            ❌ |        ✔️ |
 
+Tab3. Source de revenu possible du service GreenWave 
+
 #### Notes
 
 - <a name="note-salaire"></a>**1 :** Coût d'un salaire pour l'employeur sur la base d'un salaire médiant 3730€ [Source](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)
@@ -185,9 +187,11 @@ Les résultats montrent déjà un impact très faible, notamment grâce à la mi
 | Développement | 79 B 🟠 | 58 | 91 | 96 | 130 | 31 | 3.1
 | Pré-production | 91 A 🟢 | 100 | 91 | 96 | 123 | 6 | 0.7
 
+**Tab.4** : Évaluation de l’impact du prototype de la page d’accueil
+
 <img src="./docs/screenshot/Mainpage.png" width="500" alt="Capture d'écran de la page d'acceuil" />
 
-**Tab.2** : Évaluation de l’impact du prototype de la page d’accueil
+**Fig.5**: Prototype de la page d'une musique.
 
 ### Pages d'un titre de musique
 
@@ -195,7 +199,7 @@ Les pages des musiques ont pour HTTP-URI `/{id-music}`.
 Nous implémentons maintenant la page des musiques, pour cela nous nous bason le plus fidèlement à notre maquette avec la pochette de la musique avec ses informations disposées succintement.
 
 <img src="./docs/screenshot/Musicpage.png" width="500" alt="Capture d'écran de la page d'une musique" />
-__Fig.3__: Prototype de la page d'une musique.
+**Fig.6**: Prototype de la page d'une musique.
 
 Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario principal et donc mesuer son impact. Pour cela nous effectuons de nouveau le même protocole avec EcoIndex.
 
@@ -206,7 +210,7 @@ Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario prin
 | 3. Revenir à la page d'acceuil et choisir une autre musique	| 91 A🟢 | 1,18 | 112 | 4 | 1
 | 4. Lancer cette musique                                     | 96 A🟢 | 1,07 |  19 | 4 | 1
 
-__Tab.2__: Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
+**Tab.5**: Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
 
 Ce premier prototype de GreenWave valide avec succès le scénario prioritaire ("lancer des playlists/musiques depuis l’accueil") tout en confirmant la faible empreinte environnementale de la solution.
 Grâce à des choix techniques sobres — chargement statique des données, optimisation du code, et usage d’un framework léger (PicoCSS) —, le service atteint des scores EcoIndex entre 91 et 96 (classe A 🟢), indiquant un site très économe en ressources.
@@ -218,5 +222,29 @@ Ces résultats démontrent qu’il est possible de proposer une expérience flui
 Ce prototype charge maintenant les données de manière dynamiques, c'est à dire qu'elle sont chargées par le frontend par le réseau (accessible par HTTP). Cela ne change donc pas les fontionnalités mais se rapproche d'un mécanisme plus réel.
 
 Quant a l'évolution de l'impact environnemental sur le scénario prioritaire déjà testé (cf Tab.2) aucun changement majeur est à noter. Seul le nombre de requête est augmenté de 2 ou 3 (sur une base de 4).
+
+## Mesures de la consommation énergétique lors du passage à l'échelle
+
+Avec un prototype fonctionnel, nous pouvons simuler un "passage à l'échelle" qui augmente drastiquement.
+
+Nous pouvons imaginer que le nombre de musique et d'artiste stockés dans l'application viendra directement de sa popularité. Si des artistes connus ou en masse viennent sur l'application, les utilisteurs suivront et donc ne prendrons qu'un abonnement pour accéder à toutes leurs musiques préférées. Le reste des artistes devront aussi suivre et migrer vers notre application, faisant ainsi augmenter le nombre de données. C'est un cercle vertueux.
+
+Prenons l'exemple d'un artiste très connu utilisant le service, l'arrivée de 500 artistes est probable, apportant chacun 5 musiques, pour arriver à une base de données de 2 000 musiques.
+Nous multiplions donc par 100 la base de données de notre service.
+
+### Évolution de l'EcoIndex lors du passage à l'échelle
+
+Maintenant que nous avons ajouté à l'intégration continue l'analyse de l'impact environnemental de notre scénario principal. Nous pouvons récolter et consulter les mesures nécessaires à la production de l'EcoIndex, [avant](https://github.com/UTT-GL03/GreenWave/actions/runs/19234861546) et [après](https://github.com/UTT-GL03/GreenWave/actions/runs/19236074108).
+Le passage à l'échelle montre bien l'augmentation du DOM de la page passant de 121 à 10 021 ainsi que le poid de la page passant de 365 Ko à 1 957 Ko à l'ouverture.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les musiques			                    | <del>83 A 🟢</del><br/>35 E 🟠 | <del>1,34</del><br/>2,3  | <del>121</del><br/>10 021 | 8                   | <del>365</del><br/>1 957
+| 2. Choisir une musique et la charger 	            | <del>91 A 🟢</del><br/>87 A 🟢 | <del>1,18</del><br/>1,26 | 28                        | 2                   | <del>14</del><br/>810
+| 3. Revenir à la page et choisir une autre musique	| <del>87 A 🟢</del><br/>41 D 🟡 | <del>1,26</del><br/>2,18 | <del>134</del><br/>10 034 | <del>1</del><br/>26 | <del>5</del><br/>133
+| 4. Lancer la musique                             	| <del>90 A 🟢</del><br/>86 A 🟢 | <del>1,2</del><br/>1,28  | 41                        | 2                   | <del>14</del><br/>810
+
+**Tab.6**: Effet du passage à l'échelle sur l'impact du scénario "Lance des musiques depuis l'accueil".
+
 
 
