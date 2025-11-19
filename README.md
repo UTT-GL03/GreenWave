@@ -247,4 +247,37 @@ Le passage à l'échelle montre bien l'augmentation du DOM de la page passant de
 **Tab.6**: Effet du passage à l'échelle sur l'impact du scénario "Lance des musiques depuis l'accueil".
 
 
+### Mesure de la consommation énergétique liée à la consultation
+Nous pouvons utiliser l'utilitaire GreenFrame qui permet de calculer et d'estimer la consommation energétique de notre service sur la base de plusieurs composants comme:
+
+- du CPU (à partir du temps de calcul),
+- de la mémoire vive (à partir de la taille des données mémorisées),
+- du disque (à partir de la taille des données lues et écrites),
+- du réseau (à partir de la taille des données reçues et envoyées),
+- pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
+
+ (a)                 | cpu (mWh)  | mem (mWh)  | disk (mWh) | network (mWh) | screen (mWh) | total (mWh)   |
+| ------------------ | ---------- | ---------- | ---------- | ------------- | ------------ | ------------- | 
+| Navigateur         | 99.0       | 0.37       | 0.0        | 7.4           | 300.0        | 410.0         |
+| Serveur Web        | 0.025      | 0.020      | 0.0        | 6.5           | 0.0          | 6.6           |
+
+ (b)                 | cpu (mWh)  | mem (mWh)  | disk (mWh) | network (mWh) | screen (mWh) | total (mWh)   |
+| ------------------ | ---------- | ---------- | ---------- | ------------- | ------------ | ------------- | 
+| Navigateur         | 11.0       | 0.059      | 0.0        | 7.8           | 75.0         | 84.0          |
+| Serveur Web        | 0.019      | 0.0051     | 0.0        | 6.5           | 0.0          | 6.5           |
+
+__Tab.7__: Estimation de la consommation énergétique de la consultation de la page d'accueil (premier tableau) et d'une musique (second tableau).
+
+La consommation côté serveur est très faible par rapport au navigateur, ce qui montre que la majeure partie de l’énergie est dépensée côté client pour l’affichage et l’interaction avec la page.
+
+Du côté du navigateur, les éléments ayant le plus d’impact sont :
+- L’écran, car il reste actif pendant tout le temps de consultation,
+- Le CPU, pour le rendu et le traitement de la page,
+- Le réseau, pour le transfert des données entre client et serveur.
+
+La conversion en milliwattheure permet de mieux visualiser que la consommation réelle reste très faible, mais qu’elle est principalement dominée par l’affichage et la transmission de données.
+
+En comparant la consultation de la page principale et celle d’une musique spécifique, on remarque que la consultation de contenus plus légers réduit considérablement la consommation totale, surtout pour l’écran et le CPU du navigateur. C'est dû au fait que l'écran d'accueil affiche toutes les musqiue de la base de données. Le scenario fait aussi défiler toute la page ce qui peut durer plusieurs dizaines de secondes.
+
+
 
