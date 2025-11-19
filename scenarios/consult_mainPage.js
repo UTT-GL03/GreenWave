@@ -1,4 +1,4 @@
-const visit = async (page) => {
+module.exports = async (page) => {
   await page.goto('http://localhost/', {
       waitUntil: 'networkidle',
   });
@@ -7,5 +7,3 @@ const visit = async (page) => {
   await page.waitForNetworkIdle();
   await page.waitForTimeout(7000);
 };
-
-module.exports = visit;
