@@ -2,8 +2,8 @@ baseURL: http://localhost:80
 projectName: GreenWave
 scenarios:
   - name: Consulter la page d'acceuil
-    script: ./scenarios/consult_mainPage.js
+    path: ./scenarios/consult_mainPage.js
   - name: Consulter une musique spécifique
-    script: ./scenarios/consult_music.js
+    path: ./scenarios/consult_music.js
 containers:
   - greenwave-static_hosting-1
