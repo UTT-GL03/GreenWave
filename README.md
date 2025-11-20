@@ -266,7 +266,7 @@ Nous pouvons utiliser l'utilitaire GreenFrame qui permet de calculer et d'estime
 | Navigateur         | 11.0       | 0.059      | 0.0        | 7.8           | 75.0         | 84.0          |
 | Serveur Web        | 0.019      | 0.0051     | 0.0        | 6.5           | 0.0          | 6.5           |
 
-__Tab.7__: Estimation de la consommation énergétique de la consultation de la page d'accueil (premier tableau) et d'une musique (second tableau).
+**Tab.7**: Estimation de la consommation énergétique de la consultation de la page d'accueil (premier tableau) et d'une musique (second tableau).
 
 La consommation côté serveur est très faible par rapport au navigateur, ce qui montre que la majeure partie de l’énergie est dépensée côté client pour l’affichage et l’interaction avec la page.
 
@@ -278,6 +278,24 @@ Du côté du navigateur, les éléments ayant le plus d’impact sont :
 La conversion en milliwattheure permet de mieux visualiser que la consommation réelle reste très faible, mais qu’elle est principalement dominée par l’affichage et la transmission de données.
 
 En comparant la consultation de la page principale et celle d’une musique spécifique, on remarque que la consultation de contenus plus légers réduit considérablement la consommation totale, surtout pour l’écran et le CPU du navigateur. C'est dû au fait que l'écran d'accueil affiche toutes les musqiue de la base de données. Le scenario fait aussi défiler toute la page ce qui peut durer plusieurs dizaines de secondes.
+
+### Passage de données statique à une base de données dynamique
+
+Dans cette étape du projet, nous avons intégré CouchDB comme nouvelle base de données pour l’application. Après l’avoir découverte via Docker, créée et configurée manuellement, puis automatisée dans docker-compose et dans l’intégration continue, nous avons demandé à GreenFrame de mesurer à nouveau l’impact environnemental du scénario principal. Nous pouvons ainsi comparer les mesures obtenues [avant](https://github.com/UTT-GL03/GreenWave/actions/runs/19236074108) et [après](https://github.com/UTT-GL03/GreenWave/actions/runs/19541777899) ce changement.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les musiques			                    | <del>35 E 🟠</del><br/>33 E 🟠 | <del>2,3</del><br/>2,34  | 10 021 | 8  | <del>1 957</del><br/>2 612
+| 2. Choisir une musique et la charger 	            | <del>87 A 🟢</del><br/>85 A 🟢 | <del>1,26</del><br/>1,32 | 28     | 2  | <del>810</del><br/>1 137
+| 3. Revenir à la page et choisir une autre musique	| <del>41 D 🟡</del><br/>40 D 🟡 | <del>2,18</del><br/>2,2  | 10 034 | 26 | <del>133</del><br/>137
+| 4. Lancer la musique                             	| <del>86 A 🟢</del><br/>84 A 🟢 | <del>1,28</del><br/>1,32 | 41     | 2  | <del>810</del><br/>1 137
+
+**Tab.8**: Effet du passage de la base de données sur COUCHDB.
+
+Ce que nous observons, c’est que le passage à CouchDB n’a pas entraîné une amélioration de l’empreinte environnementale, mais plutôt un léger recul pour certaines étapes. Globalement, les notes EcoIndex restent proches, mais les pages deviennent plus lourdes et certaines actions consomment davantage de ressources.
+
+Ce passage à CouchDB était une étape nécessaire pour rendre l’application plus réaliste et mieux structurée. Les résultats montrent cependant qu’il faudra désormais travailler sur l’optimisation : réduire le nombre d’appels inutiles, limiter les volumes de données transmis, et alléger l’interface afin d’améliorer l’EcoIndex global.
+
 
 
 
