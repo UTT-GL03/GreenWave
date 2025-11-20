@@ -1,44 +1,52 @@
 {
-  "artist": [
+  "docs": [
+    {{!-- ---------------------------------------- --}}
+    {{!--            ARTISTS DOCUMENTS             --}}
+    {{!-- ---------------------------------------- --}}
     {{#repeat min=500 max=500}}
     {
-      "id": {{@index}},
+      "_id": "artist_{{@index}}",
+      "type": "artist",
       "firstName": "{{firstName}}",
       "lastName": "{{lastName}}",
       "picture": "https://picsum.photos/seed/artist{{@index}}/200/200"
     }
     {{#unless @last}},{{/unless}}
-    {{/repeat}}
-  ],
+    {{/repeat}},
 
-  "music": [
+    {{!-- ---------------------------------------- --}}
+    {{!--             MUSIC DOCUMENTS              --}}
+    {{!-- ---------------------------------------- --}}
     {{#repeat min=2000 max=2000}}
     {
-      "id": {{@index}},
+      "_id": "music_{{@index}}",
+      "type": "music",
       "title": "{{lorem min=2 max=3}}",
-      "artist": {{int 0 9}},
-      "album": {{int 0 4}},
+      "artist": "artist_{{int 0 9}}",
+      "album": "list_{{int 0 4}}",
       "picture": "https://picsum.photos/seed/music{{int 10000 99999}}/200/200",
-      "type": "{{random 'Electro' 'Rock' 'Pop' 'Alternative' 'Classic' 'Rap'}}",
+      "musicType": "{{random 'Electro' 'Rock' 'Pop' 'Alternative' 'Classic' 'Rap'}}",
       "publication": "{{date '2010' '2025' 'YYYY-MM-DD'}}",
       "audio": "/audio/{{random 'mixkit-tech-house-vibes-130.mp3' 'mixkit-sun-and-his-daughter-580.mp3' 'mixkit-a-very-happy-christmas-897.mp3' 'mixkit-deep-urban-623.mp3' 'mixkit-hip-hop-02-738.mp3' 'mixkit-serene-view-443.mp3' 'mixkit-beautiful-dream-493.mp3' 'mixkit-silent-descent-614.mp3' 'mixkit-driving-ambition-32.mp3' 'mixkit-hazy-after-hours-132.mp3'}}"
     }
     {{#unless @last}},{{/unless}}
-    {{/repeat}}
-  ],
+    {{/repeat}},
 
-  "list": [
+    {{!-- ---------------------------------------- --}}
+    {{!--              LIST DOCUMENTS              --}}
+    {{!-- ---------------------------------------- --}}
     {{#repeat min=500 max=500}}
     {
-      "id": {{@index}},
+      "_id": "list_{{@index}}",
+      "type": "list",
       "title": "{{lorem min=2 max=3}}",
-      "artist": {{int 0 9}},
+      "artist": "artist_{{int 0 9}}",
       "picture": "https://picsum.photos/seed/list{{@index}}/300/300",
-      "type": "{{random 'album' 'playlist'}}",
+      "listType": "{{random 'album' 'playlist'}}",
       "publication": "{{date '2010' '2025' 'YYYY-MM-DD'}}",
       "musics": [
         {{#repeat min=3 max=7}}
-          {{int 0 19}}{{#unless @last}},{{/unless}}
+          "music_{{int 0 19}}"{{#unless @last}},{{/unless}}
         {{/repeat}}
       ]
     }

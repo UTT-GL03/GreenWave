@@ -7,3 +7,4 @@ scenarios:
     path: ./scenarios/consult_music.js
 containers:
   - greenwave-static_hosting-1
+  - greenwave-backend-1

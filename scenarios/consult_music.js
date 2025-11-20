@@ -1,5 +1,5 @@
 module.exports = async (page) => {
-  await page.goto('http://localhost/detail/0', {
+  await page.goto('http://localhost/detail/music_1000', {
       waitUntil: 'networkidle',
   });
   await page.waitForTimeout(10000);
