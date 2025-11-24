@@ -343,6 +343,8 @@ Ce que nous observons, c’est que le passage à CouchDB n’a pas entraîné un
 
 Ce passage à CouchDB était une étape nécessaire pour rendre l’application plus réaliste et mieux structurée. Les résultats montrent cependant qu’il faudra désormais travailler sur l’optimisation : réduire le nombre d’appels inutiles, limiter les volumes de données transmis, et alléger l’interface afin d’améliorer l’EcoIndex global.
 
+Cela prouve donc que EcoIndex ne se base pas sur des facteurs assez précis, puisque via Greenframe nous avons une économie d'énergie qu'EcoIndex ne voit pas.
+
 ## Stratégie de limitation du nombre de musiques affichées
 Dans une médiathèque musicale classique (CD, vinyles, playlists physiques…), les nouveautés disponibles sont limitées aux titres récemment ajoutés ou publiés.
 
