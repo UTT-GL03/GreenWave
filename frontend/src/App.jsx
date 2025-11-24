@@ -6,19 +6,38 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [data, setData] = useState(null);
+  const [musics, setMusics] = useState(null);
+  const [artists, setArtists] = useState({});
 
   useEffect(() => {
-    fetch('http://localhost:5984/greenwavedb/_all_docs?include_docs=true')
-      .then(res => res.json())
-      .then(result => {
-        const docs = result.rows.map(row => row.doc);
 
-        setData({
-          music: docs.filter(d => d.type === "music"),
-          artist: docs.filter(d => d.type === "artist"),
-          list: docs.filter(d => d.type === "list")
-        });
+    fetch('http://localhost:5984/greenwavedb/_find', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        selector: { type: "music" },
+        sort: [{ publication: "desc" }],
+        limit: 20
+      })
+    })
+      .then(res => res.json())
+      .then(async (result) => {
+
+        const musics = result.docs;
+        setMusics(musics);
+
+        const artistIds = [...new Set(musics.map(m => m.artist))];
+
+        const artistPromises = artistIds.map(id =>
+          fetch(`http://localhost:5984/greenwavedb/${id}`).then(r => r.json())
+        );
+
+        const fetchedArtists = await Promise.all(artistPromises);
+
+        const artistMap = {};
+        fetchedArtists.forEach(a => artistMap[a._id] = a);
+
+        setArtists(artistMap);
       })
       .catch(err => console.error("Erreur CouchDB :", err));
   }, []);
@@ -28,12 +47,12 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            {!data ? (
+            {!musics ? (
               <p>Loading...</p>
             ) : (
               <div className='list-music'>
-                {data.music.map((music) => {
-                  const artist = data.artist.find(a => a._id === music.artist);
+                {musics.map((music) => {
+                  const artist = artists[music.artist];
 
                   return (
                     <Link key={music._id} to={`/detail/${music._id}`}>
