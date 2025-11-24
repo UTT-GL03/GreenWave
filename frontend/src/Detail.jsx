@@ -7,32 +7,35 @@ import placeholder from './assets/placeholderimg.png';
 
 function Detail() {
 
-  const [data, setData] = useState(null);
+  const [music, setMusic] = useState(null);
+  const [artist, setArtist] = useState(null);
+  const [album, setAlbum] = useState(null);
   const { id } = useParams();
   const { playMusic } = usePlayer();
 
   useEffect(() => {
-    fetch('http://localhost:5984/greenwavedb/_all_docs?include_docs=true')
-      .then(res => res.json())
-      .then(result => {
-        const docs = result.rows.map(row => row.doc);
 
-        setData({
-          music: docs.filter(d => d.type === "music"),
-          artist: docs.filter(d => d.type === "artist"),
-          list: docs.filter(d => d.type === "list")
-        });
+    // 1️⃣ Charger la musique
+    fetch(`http://localhost:5984/greenwavedb/${id}`)
+      .then(res => res.json())
+      .then(musicDoc => {
+        setMusic(musicDoc);
+
+        // 2️⃣ Charger artiste
+        fetch(`http://localhost:5984/greenwavedb/${musicDoc.artist}`)
+          .then(res => res.json())
+          .then(setArtist);
+
+        // 3️⃣ Charger album
+        fetch(`http://localhost:5984/greenwavedb/${musicDoc.album}`)
+          .then(res => res.json())
+          .then(setAlbum);
       })
       .catch(err => console.error("Erreur CouchDB :", err));
-  }, []);
 
-  if (!data) return <p>Loading...</p>;
+  }, [id]);
 
-  const music = data.music.find(m => m._id === id);
-  if (!music) return <p>This music was not found</p>;
-
-  const artist = data.artist.find(a => a._id === music.artist);
-  const album = data.list.find(l => l._id === music.album);
+  if (!music) return <p>Loading...</p>;
 
   const handlePlay = () => playMusic(music);
 

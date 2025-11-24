@@ -14,22 +14,6 @@ const resolveAudioSrc = (src) => {
 
 export default function Player() {
 
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch('http://localhost:5984/greenwavedb/_all_docs?include_docs=true')
-      .then(res => res.json())
-      .then(result => {
-        const docs = result.rows.map(row => row.doc);
-
-        setData({
-          music: docs.filter(d => d.type === "music"),
-          artist: docs.filter(d => d.type === "artist"),
-          list: docs.filter(d => d.type === "list")
-        });
-      });
-  }, []);
-
   const { currentMusic, isPlaying, setIsPlaying, audioRef } = usePlayer();
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
@@ -99,59 +83,55 @@ export default function Player() {
 
   return (
     <>
-      {!data ? (
-        <p>Loading...</p>
-      ) : (
-        <footer className="player">
-          <div className="player-left">
-            <img src={currentMusic.picture} alt={currentMusic.title} />
-            <div>
-              <p className="title">{currentMusic.title || "—"}</p>
+      <footer className="player">
+        <div className="player-left">
+          <img src={currentMusic.picture} alt={currentMusic.title} />
+          <div>
+            <p className="title">{currentMusic.title || "—"}</p>
 
-              <p className="artist">
-                {artist
-                  ? `${artist.firstName} ${artist.lastName}`
-                  : "Unknown artist"}
-              </p>
+            <p className="artist">
+              {artist
+                ? `${artist.firstName} ${artist.lastName}`
+                : "Unknown artist"}
+            </p>
+          </div>
+        </div>
+
+        <div className="player-center">
+          <div className="player-controls">
+            <button onClick={togglePlay}>{isPlaying ? "⏸️" : "▶️"}</button>
+
+            <div
+              className="progress-bar"
+              onClick={handleSeek}
+              role="progressbar"
+              aria-valuenow={Math.round(progress)}
+            >
+              <div className="progress" style={{ width: `${progress}%` }}></div>
             </div>
           </div>
 
-          <div className="player-center">
-            <div className="player-controls">
-              <button onClick={togglePlay}>{isPlaying ? "⏸️" : "▶️"}</button>
+          {loadError && <div className="load-error">{loadError}</div>}
+        </div>
 
-              <div
-                className="progress-bar"
-                onClick={handleSeek}
-                role="progressbar"
-                aria-valuenow={Math.round(progress)}
-              >
-                <div className="progress" style={{ width: `${progress}%` }}></div>
-              </div>
-            </div>
-
-            {loadError && <div className="load-error">{loadError}</div>}
-          </div>
-
-          <div className="player-right">
-            <span>🔊</span>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={handleVolumeChange}
-            />
-          </div>
-
-          <audio
-            ref={audioRef}
-            onTimeUpdate={handleTimeUpdate}
-            onEnded={() => setIsPlaying(false)}
+        <div className="player-right">
+          <span>🔊</span>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
           />
-        </footer>
-      )}
+        </div>
+
+        <audio
+          ref={audioRef}
+          onTimeUpdate={handleTimeUpdate}
+          onEnded={() => setIsPlaying(false)}
+        />
+      </footer>
     </>
   );
 }
