@@ -7,4 +7,4 @@ scenarios:
     path: ./scenarios/consult_music.js
 containers:
   - greenwave-static_hosting-1
-  - gracious_engelbart
+  - greenwave-backend-1
