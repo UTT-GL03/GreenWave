@@ -19,10 +19,10 @@ services:
       test: curl -f http://localhost:5984/_up || exit 1
       start_period: 10s
       start_interval: 2s
-  
+
   accessible_backend:
     image: curlimages/curl
-    entrypoint: ["/bin/sh","-c"]
+    entrypoint: [ "/bin/sh", "-c" ]
     command:
       - |
         alias put="curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}'"
@@ -34,9 +34,21 @@ services:
       backend:
         condition: service_healthy
 
+  index:
+    image: curlimages/curl
+    entrypoint: [ "/bin/sh", "-c" ]
+    volumes:
+      - ./backend/by_date.json:/by_date.json
+    command:
+      - |
+        curl -X POST http://backend:5984/greenwavedb/_index -H "Content-Type: application/json" -d @/by_date.json -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}'
+    depends_on:
+      accessible_backend:
+        condition: service_completed_successfully
+
   updated_samples:
     image: curlimages/curl
-    entrypoint: ["/bin/sh","-c"]
+    entrypoint: [ "/bin/sh", "-c" ]
     volumes:
       - ./frontend/public/sample_data.json:/sample_data.json
     command:

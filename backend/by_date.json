@@ -1,0 +1,10 @@
+{
+  "index": {
+    "fields": [
+      "type",
+      "publication"
+    ]
+  },
+  "name": "music_by_publication",
+  "type": "json"
+}
