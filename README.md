@@ -248,14 +248,12 @@ Le passage à l'échelle montre bien l'augmentation du DOM de la page passant de
 
 
 ### Mesure de la consommation énergétique liée à la consultation
-Nous pouvons utiliser l'utilitaire GreenFrame qui permet de calculer et d'estimer la consommation energétique de notre service sur la base de plusieurs composants comme:
-
-- du CPU (à partir du temps de calcul),
-- de la mémoire vive (à partir de la taille des données mémorisées),
-- du disque (à partir de la taille des données lues et écrites),
-- du réseau (à partir de la taille des données reçues et envoyées),
-- pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
-
+Nous utilisons l'outil GreenFrame, qui permet de calculer et d'estimer la consommation energétique de notre service sur la base de plusieurs composants comme :
+- le CPU (à partir du temps de calcul),
+- la mémoire vive (à partir de la taille des données mémorisées),
+- le disque (à partir de la taille des données lues et écrites),
+- le réseau (à partir de la taille des données reçues et envoyées),
+- et pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
 
  (a)                 | cpu (mWh)  | mem (mWh)  | disk (mWh) | network (mWh) | screen (mWh) | total (mWh)   |
 | ------------------ | ---------- | ---------- | ---------- | ------------- | ------------ | ------------- | 
@@ -267,65 +265,70 @@ Nous pouvons utiliser l'utilitaire GreenFrame qui permet de calculer et d'estime
 | Navigateur         | 1.2        | 0.055      | 0.0        | 7.8           | 68.0         | 77.0          |
 | Serveur Web        | 0.020      | 0.013      | 0.0        | 6.5           | 0.0          | 6.5           |
 
-**Tab.7**: Estimation de la consommation énergétique de la consultation de la page d'accueil (premier tableau) et d'une musique (second tableau).
+**Tab.7**: Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b).
 
-La consommation côté serveur est très faible par rapport au navigateur, ce qui montre que la majeure partie de l’énergie est dépensée côté client pour l’affichage et l’interaction avec la page.
+Les résultats montrent que la consommation côté serveur web reste très faible par rapport à celle du navigateur. La majeure partie de l’énergie est donc consommée côté client, principalement pour l’affichage et l’interaction avec la page.
 
-Du côté du navigateur, les éléments ayant le plus d’impact sont :
-- L’écran, car il reste actif pendant tout le temps de consultation,
-- Le CPU, pour le rendu et le traitement de la page,
-- Le réseau, pour le transfert des données entre client et serveur.
+Au niveau du navigateur, les postes les plus énergivores sont :
+- l’écran, qui reste actif durant toute la consultation ;
+- le CPU, sollicité pour le rendu et l’exécution du code ;
+- le réseau, utilisé pour le transfert des données entre le client et le serveur.
 
-La conversion en milliwattheure permet de mieux visualiser que la consommation réelle reste très faible, mais qu’elle est principalement dominée par l’affichage et la transmission de données.
+L’expression des résultats en milliwattheures (mWh) permet de mieux visualiser les ordres de grandeur : la consommation reste faible à l’échelle d’une seule consultation, mais elle est dominée par l’affichage et les échanges réseau.
 
-En comparant la consultation de la page principale et celle d’une musique spécifique, on remarque que la consultation de contenus plus légers réduit considérablement la consommation totale, surtout pour l’écran et le CPU du navigateur. C'est dû au fait que l'écran d'accueil affiche toutes les musqiue de la base de données. Le scenario fait aussi défiler toute la page ce qui peut durer plusieurs dizaines de secondes.
+En comparant la consultation de la page d’accueil et celle d’une musique spécifique, on constate que cette dernière consomme nettement moins d’énergie, notamment au niveau de l’écran et du CPU du navigateur. Cela s’explique par le fait que la page d’accueil affiche l’ensemble des musiques de la base de données et que le scénario de test fait défiler toute la page, ce qui prolonge significativement la durée d’exécution.
 
-### Passage de données statique à une base de données dynamique ainsi que ces effets
+### Passage de données statique à une base de données dynamique et effets observés
 
-Dans cette étape du projet, nous avons intégré CouchDB comme nouvelle base de données pour l’application. Après l’avoir découverte via Docker, créée et configurée manuellement, puis automatisée dans docker-compose et dans l’intégration continue, nous avons demandé à GreenFrame de mesurer à nouveau l’impact environnemental du scénario principal. 
+Dans cette étape du projet, nous avons intégré CouchDB comme nouvelle base de données pour l’application. Après l’avoir découverte via Docker, créée et configurée manuellement, puis automatisée dans docker-compose et dans la chaîne d’intégration continue, nous avons demandé à GreenFrame de mesurer à nouveau l’impact environnemental du scénario principal. 
 
 |                    | cpu (s)                                     | screen (s) | mem (B)                                   | disk (B) | network (B)                               |
 | ------------------ | ------------------------------------------- | ---------- | ----------------------------------------- | -------- | ----------------------------------------- |
-| Navigateur         | <del>0,133</del><br/><add>0,0754</add>      | 17,6       | <del>1,56e+8</del><br/><add>1,24e+8</add> | 0,00     | <del>1,22e+7</del><br/><add>3,64e+5</add> |
-| Serveur Web        | <del>0,000856</del><br/><add>0,000210</add> | 0,00       | 5,56e+6                                   | 0,00     | <del>1,22e+7</del><br/><add>3,62e+5</add> |
-| Base de données    | <del>0</del><br/><add>0,0357</add>          | 0,00       | <del>0</del><br/><add>1,27e+8</add>       | 0,00     | <del>0</del><br/><add>1,80e+3</add>       |
+| Navigateur         | <del>0,0946</del><br/><add>0,195</add>      | 17,5       | <del>1,43e+8</del><br/><add>1,36e+8</add> | 0,00     | <del>1,52e+6</del><br/><add>1,72e+6</add> |
+| Serveur Web        | <del>0,00114</del><br/><add>0,000230</add>  | 0,00       | <del>2,35e+7</del><br/><add>5,61e+6</add> | 0,00     | <del>1,27e+6</del><br/><add>3,69e+5</add> |
+| Base de données    | <del>0</del><br/><add>0,130</add>           | 0,00       | <del>0</del><br/><add>1,02e+8</add>       | 0,00     | <del>0</del><br/><add>1,35e+6</add>       |
 
-**Tab.8**: Effet sur l'utilisation des ressources de l'introduction d'une base de données dans l'application, lors de la consultation d'une musique.
+**Tab.8**: Présente l’évolution de l’utilisation des ressources suite à l’introduction de la base de données lors de la consultation d’une musique.
 
-Nous pouvons utiliser l'utilitaire GreenFrame qui permet de calculer et d'estimer la consommation energétique de notre service sur la base de plusieurs composants comme:
+On observe l’apparition d’une consommation propre à la base de données, en particulier :
+- du temps CPU,
+- de la mémoire,
+- et du trafic réseau.
 
-- du CPU (à partir du temps de calcul),
-- de la mémoire vive (à partir de la taille des données mémorisées),
-- du disque (à partir de la taille des données lues et écrites),
-- du réseau (à partir de la taille des données reçues et envoyées),
-- pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
+En parallèle, certaines consommations côté serveur web diminuent, car une partie du travail est désormais déléguée à CouchDB. En revanche, la charge côté navigateur évolue peu, avec une légère augmentation du trafic réseau due aux échanges supplémentaires avec la base.
 
- (a)                 | cpu (mWh)  | mem (mWh)                 | disk (mWh) | network (mWh)          | screen (mWh) | total (mWh)            |
-| ------------------ | ---------- | ------------------------- | ---------- | ---------------------- | ------------ | ---------------------- | 
-| Navigateur         | 110.0      | <del>0.79</del></br>0.35  | 0.0        | <del>7.9</del></br>17  | 280.0        | 400                    |
-| Serveur Web        | 0.017      | <del>0.054</del></br>0.46 | 0.0        | <del>6.5</del></br>1.9 | 0.0          | <del>6.6</del></br>2.0 |
-| Base de données    | 0.0        | 0.0                       | 0.0        | 0.0                    | 0.0          | 0.0                    |
+## Impacts énergétique après l'introduction de CouchDB
+
+Nous avons à nouveau utilisé GreenFrame pour estimer la consommation énergétique à partir :
+- du CPU,
+- de la mémoire vive,
+- du disque,
+- du réseau,
+- et de l’écran (pour le navigateur).
+
+ (a)                 | cpu (mWh)              | mem (mWh)                 | disk (mWh) | network (mWh)          | screen (mWh) | total (mWh)            |
+| ------------------ | ---------------------- | ------------------------- | ---------- | ---------------------- | ------------ | ---------------------- | 
+| Navigateur         | 110,0                  | <del>0,79</del></br>0,35  | 0,0        | <del>7,9</del></br>17  | 280,0        | 400                    |
+| Serveur Web        | 0,017                  | <del>0,054</del></br>0,46 | 0,0        | <del>6,5</del></br>1,9 | 0,0          | <del>6,6</del></br>2,0 |
+| Base de données    | <del>0,0</del></br>6,2 | <del>0,0</del></br>0,020  | 0,0        | <del>0,0</del></br>14  | 0,0          | <del>0,0</del></br>20  |
 
  (b)                 | cpu (mWh)                   | mem (mWh)                  | disk (mWh) | network (mWh)          | screen (mWh) | total (mWh)            |
 | ------------------ | --------------------------- | -------------------------- | ---------- | ---------------------- | ------------ | ---------------------- | 
-| Navigateur         | <del>1.2</del></br>2.5      | <del>0.055</del></br>0.057 | 0.0        | <del>7.8</del></br>24  | 68.0         | <del>77.0</del></br>97 |
-| Serveur Web        | <del>0.020</del></br>0.0079 | 0.013                      | 0.0        | <del>6.5</del></br>1.9 | 0.0          | <del>6.5</del></br>1.9 |
-| Base de données    | 0.0                         | 0.0                        | 0.0        | 0.0                    | 0.0          | 0.0                    |
+| Navigateur         | <del>1,2</del></br>2,5      | <del>0,055</del></br>0,057 | 0,0        | <del>7,8</del></br>8,8 | 68,0         | <del>77,0</del></br>80 |
+| Serveur Web        | <del>0,020</del></br>0,0079 | 0,013                      | 0,0        | <del>6,5</del></br>1,9 | 0,0          | <del>6,5</del></br>1,9 |
+| Base de données    | <del>0,0</del></br>2,3      | <del>0,0</del></br>0,053   | 0,0        | <del>0,0</del></br>6,9 | 0,0          | <del>0,0</del></br>9,2 |
 
-**Tab.9**: Estimation de la consommation énergétique de la consultation de la page d'accueil (premier tableau) et d'une musique (second tableau).
+**Tab.9**: Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b), après l’introduction de la base de données.
 
-La consommation côté serveur est très faible par rapport au navigateur, ce qui montre que la majeure partie de l’énergie est dépensée côté client pour l’affichage et l’interaction avec la page.
+Les résultats confirment que la consommation reste majoritairement portée par le navigateur. L’écran demeure la principale source de consommation, suivi du CPU et du réseau.
 
-Du côté du navigateur, les éléments ayant le plus d’impact sont :
-- L’écran, car il reste actif pendant tout le temps de consultation,
-- Le CPU, pour le rendu et le traitement de la page,
-- Le réseau, pour le transfert des données entre client et serveur.
+L’introduction de la base de données ajoute une nouvelle source de consommation, non négligeable, en particulier au niveau du réseau et du CPU côté CouchDB. Malgré cela, l’ordre de grandeur reste dominé par la partie cliente.
 
-La conversion en milliwattheure permet de mieux visualiser que la consommation réelle reste très faible, mais qu’elle est principalement dominée par l’affichage et la transmission de données.
+Comme précédemment, la consultation d’une seule musique reste beaucoup moins coûteuse que l’affichage de la page listant toutes les musiques, en raison de la quantité d’informations affichées et de la durée du scénario.
 
-En comparant la consultation de la page principale et celle d’une musique spécifique, on remarque que la consultation de contenus plus légers réduit considérablement la consommation totale, surtout pour l’écran et le CPU du navigateur. C'est dû au fait que l'écran d'accueil affiche toutes les musqiue de la base de données. Le scenario fait aussi défiler toute la page ce qui peut durer plusieurs dizaines de secondes.
+## Comparaison avec EcoIndex avant et après CouchDB
 
-Nous pouvons ainsi comparer les mesures obtenues avec ecoIndex [avant](https://github.com/UTT-GL03/GreenWave/actions/runs/19236074108) et [après](https://github.com/UTT-GL03/GreenWave/actions/runs/19541777899) ce changement.
+Nous pouvons ainsi comparer les mesures obtenues avec EcoIndex [avant](https://github.com/UTT-GL03/GreenWave/actions/runs/19236074108) et [après](https://github.com/UTT-GL03/GreenWave/actions/runs/19541777899) ce changement.
 
 |                                                   | EcoIndex                        | GES (gCO2e)              | Taille du DOM  | Requêtes | Taille de la page (ko)
 |---------------------------------------------------|--------------------------------:|-------------------------:|---------------:|---------:|---------------------:
@@ -334,12 +337,22 @@ Nous pouvons ainsi comparer les mesures obtenues avec ecoIndex [avant](https://g
 | 3. Revenir à la page et choisir une autre musique	| <del>41 D 🟡</del><br/>40 D 🟡 | <del>2,18</del><br/>2,2  | 10 034         | 26       | <del>133</del><br/>137
 | 4. Lancer la musique                             	| <del>86 A 🟢</del><br/>84 A 🟢 | <del>1,28</del><br/>1,32 | 41             | 2        | <del>810</del><br/>1 137
 
-**Tab.10**: Effet du passage de la base de données (CouchDB) mesuré avec ecoIndex.
+**Tab.10**: Effet du passage de la base de données (CouchDB) mesuré avec EcoIndex.
 
 Ce que nous observons, c’est que le passage à CouchDB n’a pas entraîné une amélioration de l’empreinte environnementale, mais plutôt un léger recul pour certaines étapes. Globalement, les notes EcoIndex restent proches, mais les pages deviennent plus lourdes et certaines actions consomment davantage de ressources.
 
 Ce passage à CouchDB était une étape nécessaire pour rendre l’application plus réaliste et mieux structurée. Les résultats montrent cependant qu’il faudra désormais travailler sur l’optimisation : réduire le nombre d’appels inutiles, limiter les volumes de données transmis, et alléger l’interface afin d’améliorer l’EcoIndex global.
 
+## Stratégie de limitation du nombre de musiques affichées
+Dans une médiathèque musicale classique (CD, vinyles, playlists physiques…), les nouveautés disponibles sont limitées aux titres récemment ajoutés ou publiés.
 
+Toutefois, cette logique ne peut pas être appliquée directement dans une application numérique, car les musiques y sont souvent rendues accessibles dès qu’elles sont ajoutées dans la base de données, parfois à des rythmes irréguliers.
 
+Dès lors, deux stratégies équivalentes peuvent être envisagées pour afficher sur la page d’accueil une sélection cohérente de titres récents :
 
+- Afficher uniquement les musiques ajoutées aujourd’hui, ainsi que celles déjà préparées pour les ajouts du lendemain.
+- Afficher les n dernières musiques ajoutées, où n correspondrait au volume habituel de titres mis en avant (par exemple 20).
+
+Dans les deux cas, ce filtrage nécessite d’indexer ou de stocker les musiques en fonction de leur date et heure d’ajout dans la base.
+
+Nous retiendrons la seconde stratégie, car elle garantit une expérience utilisateur plus homogène : peu importe le moment de la journée où l’utilisateur ouvre l’application, il verra toujours les titres les plus récemment publiés, sans variation de quantité ou de pertinence.
