@@ -15,18 +15,15 @@ function Detail() {
 
   useEffect(() => {
 
-    // 1️⃣ Charger la musique
     fetch(`http://localhost:5984/greenwavedb/${id}`)
       .then(res => res.json())
       .then(musicDoc => {
         setMusic(musicDoc);
 
-        // 2️⃣ Charger artiste
         fetch(`http://localhost:5984/greenwavedb/${musicDoc.artist}`)
           .then(res => res.json())
           .then(setArtist);
 
-        // 3️⃣ Charger album
         fetch(`http://localhost:5984/greenwavedb/${musicDoc.album}`)
           .then(res => res.json())
           .then(setAlbum);

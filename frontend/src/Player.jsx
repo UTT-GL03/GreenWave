@@ -18,6 +18,24 @@ export default function Player() {
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
   const [loadError, setLoadError] = useState(null);
+  const [artist, setArtist] = useState(null)
+
+  console.log(artist)
+
+  useEffect(() => {
+    if (!currentMusic) {
+      setArtist(null);
+      return;
+    }
+
+    fetch(`http://localhost:5984/greenwavedb/${currentMusic.artist}`)
+      .then(res => res.json())
+      .then(setArtist)
+      .catch(err => console.error("Erreur CouchDB :", err));
+
+  }, [currentMusic]);
+
+  console.log(artist)
 
   useEffect(() => {
     if (!audioRef.current || !currentMusic) return;
@@ -78,8 +96,6 @@ export default function Player() {
         <p style={{ color: "white", padding: "1rem" }}>No song selected</p>
       </footer>
     );
-
-  const artist = data?.artist?.find(a => a._id === currentMusic.artist);
 
   return (
     <>
