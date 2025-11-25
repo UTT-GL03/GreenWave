@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 35px;
-  margin: 0 55px 130px 55px;
+  margin: 0 55px 55px 55px;
 }
 .music-card {
   display: flex;
@@ -32,6 +32,23 @@
 
 .placeholder {
   width: 200px
+}
+
+.load-more-btn {
+  display: block;
+  margin: 20px auto 200px auto; 
+  padding: 12px 24px;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.load-more-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 @keyframes logo-spin {
