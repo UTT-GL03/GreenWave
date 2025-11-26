@@ -359,7 +359,7 @@ Dans les deux cas, ce filtrage nécessite d’indexer ou de stocker les musiques
 
 Nous retiendrons la seconde stratégie, car elle garantit une expérience utilisateur plus homogène : peu importe le moment de la journée où l’utilisateur ouvre l’application, il verra toujours les titres les plus récemment publiés, sans variation de quantité ou de pertinence.
 
-![More](./docs/screeshot/Pagination.png)
+![More](./docs/screenshot/Pagination.png)
  **Fig. 5** : Chargement progressif (à la demande) des musiques (copie d'écran).
  (a)                 | cpu (mWh)                   | mem (mWh)                  | disk (mWh) | network (mWh)          | screen (mWh)            | total (mWh)            |
 | ------------------ | --------------------------- | -------------------------- | ---------- | ---------------------- | ----------------------- | ---------------------- | 
