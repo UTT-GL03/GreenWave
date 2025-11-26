@@ -60,7 +60,7 @@ Nous avons réaliser une analyse des plateformes de nos concurents et voici les 
 | Apple Music   |              34 |   E 🟧 |   [...](./benchmark/AppleMusic/ecoindex-environmental-statement.md) |
 | Youtube Music |              88 |   A 🟩 | [...](./benchmark/YoutubeMusic/ecoindex-environmental-statement.md) |
 
-Tab.1 : Mesure de l'EcoIndex moyen de services de streaming musicaux.
+**Tab.1** : Mesure de l'EcoIndex moyen de services de streaming musicaux.
 
 Le spectre des notes est très varié de A à E, pour les moins bon site : [Spotify](https://open.spotify.com/) & [](https://music.apple.com/fr/new) nous constatons un grand nombre de contenu disponible des la page d'accueil. De plus, la page se charge complètement sans que ce soit nécessaire, l'utilisateur ne la défilant pas entière systématiquement. La résolution des pochettes d'album et de musique peut aussi être de trop grande qualité pour l'usage que nous en avons. Le site affiche aussi constament les playlists enregistrés de l'utilisateur ce qui ajoute autant de requête pour une image que de playlist enregistrée par l'utilisateur.
 A côté nous avons [Youtube Music](https://music.youtube.com/) qui s'impose en bon élève avec un bon score, ce résultat peut s'expliquer par un faible chargement de contenu à l'ouverture de la page d'accueil. Contrairement à spotify, YT Music, pour la recherche, envoie une requête après que l'utilisateur ai appuyé sur "entrée" et n'envoie pas une requete à chaque nouvelle lettre entrée.
@@ -77,7 +77,7 @@ Pour compléter notre analyse, il est important de comprendre les modèles écon
 | Apple Music   | <ul><li>Écoute d'extrait (uniquement)</li></ul>                                                          | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Choisir l'ordre des titres</li><li>Qualité sonore supérieure</li><li>Apple TV+</li></ul>                                           | <ul><li>Revenu publicitaire (55%)</li><li>Revenu abonnement et autres (45%)</li><li>[Source](https://www.latribune.fr/technos-medias/internet/avec-ses-80-millions-d-abonnes-payants-youtube-veut-conquerir-l-industrie-musicale-940202.html)</li></ul> |
 | Youtube Music | <ul><li>Musique avec publicités vidéo/audio (Régie interne)</li><li>Choisir l'ordre des titres</li></ul> | <ul><li>Musique sans publicités</li><li>Téléchargement pour mode hors connexion</li><li>Possibilité de mettre l'application en arrière plan ou éteindre le téléphone</li><li>Youtube "classique" sans publicités</li></ul> | <ul><li>Revenu abonnement et autres (100%)</li><li>[Source](https://pswd.fr/modele-economique-youtube/)</li></ul>                                                                                                                                       |
 
-Tab2. Modèles économiques des leaders du streaming musical
+**Tab.2** : Modèles économiques des leaders du streaming musical
 
 | Source de revenu |                    Montant unitaire | Quantité pour financer un salaire [[1](#note-salaire)] | Quantité pour financer l'infrastructure [[2](#note-infra)] | Spotify | Apple Music | Youtube Music | GreenWave |
 | :--------------- | ----------------------------------: | -----------------------------------------------------: | ---------------------------------------------------------: | ------: | ----------: | ------------: | --------: |
@@ -85,7 +85,7 @@ Tab2. Modèles économiques des leaders du streaming musical
 | Publicité        | 0.01€ (en moyenne) [[4](#note-cpm)] |                                                370 300 |                                                  3 500 000 |      ✔️ |          ❌ |            ✔️ |        ✔️ |
 | Token            |               5€ [[5](#note-token)] |                                                    746 |                                                      7 000 |      ❌ |          ❌ |            ❌ |        ✔️ |
 
-Tab3. Source de revenu possible du service GreenWave 
+**Tab.3** : Source de revenu possible du service GreenWave 
 
 #### Notes
 
@@ -191,7 +191,7 @@ Les résultats montrent déjà un impact très faible, notamment grâce à la mi
 
 <img src="./docs/screenshot/Mainpage.png" width="500" alt="Capture d'écran de la page d'acceuil" />
 
-**Fig.5**: Prototype de la page d'une musique.
+**Fig.5** : Prototype de la page d'une musique.
 
 ### Pages d'un titre de musique
 
@@ -199,7 +199,7 @@ Les pages des musiques ont pour HTTP-URI `/{id-music}`.
 Nous implémentons maintenant la page des musiques, pour cela nous nous bason le plus fidèlement à notre maquette avec la pochette de la musique avec ses informations disposées succintement.
 
 <img src="./docs/screenshot/Musicpage.png" width="500" alt="Capture d'écran de la page d'une musique" />
-**Fig.6**: Prototype de la page d'une musique.
+**Fig.6** : Prototype de la page d'une musique.
 
 Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario principal et donc mesuer son impact. Pour cela nous effectuons de nouveau le même protocole avec EcoIndex.
 
@@ -210,7 +210,7 @@ Une fois cette page ajoutée nous pouvons maintenant réaliser le scénario prin
 | 3. Revenir à la page d'acceuil et choisir une autre musique	| 91 A🟢 | 1,18 | 112 | 4 | 1
 | 4. Lancer cette musique                                     | 96 A🟢 | 1,07 |  19 | 4 | 1
 
-**Tab.5**: Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
+**Tab.5** : Évaluation de l'impact du scénario "Lance des playlists/musiques depuis l'accueil" dans le prototype n°1.
 
 Ce premier prototype de GreenWave valide avec succès le scénario prioritaire ("lancer des playlists/musiques depuis l’accueil") tout en confirmant la faible empreinte environnementale de la solution.
 Grâce à des choix techniques sobres — chargement statique des données, optimisation du code, et usage d’un framework léger (PicoCSS) —, le service atteint des scores EcoIndex entre 91 et 96 (classe A 🟢), indiquant un site très économe en ressources.
@@ -244,7 +244,7 @@ Le passage à l'échelle montre bien l'augmentation du DOM de la page passant de
 | 3. Revenir à la page et choisir une autre musique	| <del>87 A 🟢</del><br/>41 D 🟡 | <del>1,26</del><br/>2,18 | <del>134</del><br/>10 034 | <del>1</del><br/>26 | <del>5</del><br/>133
 | 4. Lancer la musique                             	| <del>90 A 🟢</del><br/>86 A 🟢 | <del>1,2</del><br/>1,28  | 41                        | 2                   | <del>14</del><br/>810
 
-**Tab.6**: Effet du passage à l'échelle sur l'impact du scénario "Lance des musiques depuis l'accueil".
+**Tab.6** : Effet du passage à l'échelle sur l'impact du scénario "Lance des musiques depuis l'accueil".
 
 
 ### Mesure de la consommation énergétique liée à la consultation
@@ -265,7 +265,7 @@ Nous utilisons l'outil GreenFrame, qui permet de calculer et d'estimer la consom
 | Navigateur         | 1.2        | 0.055      | 0.0        | 7.8           | 68.0         | 77.0          |
 | Serveur Web        | 0.020      | 0.013      | 0.0        | 6.5           | 0.0          | 6.5           |
 
-**Tab.7**: Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b).
+**Tab.7** : Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b).
 
 Les résultats montrent que la consommation côté serveur web reste très faible par rapport à celle du navigateur. La majeure partie de l’énergie est donc consommée côté client, principalement pour l’affichage et l’interaction avec la page.
 
@@ -288,7 +288,7 @@ Dans cette étape du projet, nous avons intégré CouchDB comme nouvelle base de
 | Serveur Web        | <del>0,00114</del><br/><add>0,000230</add>  | 0,00       | <del>2,35e+7</del><br/><add>5,61e+6</add> | 0,00     | <del>1,27e+6</del><br/><add>3,69e+5</add> |
 | Base de données    | <del>0</del><br/><add>0,130</add>           | 0,00       | <del>0</del><br/><add>1,02e+8</add>       | 0,00     | <del>0</del><br/><add>1,35e+6</add>       |
 
-**Tab.8**: Présente l’évolution de l’utilisation des ressources suite à l’introduction de la base de données lors de la consultation d’une musique.
+**Tab.8** : Présente l’évolution de l’utilisation des ressources suite à l’introduction de la base de données lors de la consultation d’une musique.
 
 On observe l’apparition d’une consommation propre à la base de données, en particulier :
 - du temps CPU,
@@ -318,7 +318,7 @@ Nous avons à nouveau utilisé GreenFrame pour estimer la consommation énergét
 | Serveur Web        | <del>0,020</del></br>0,0079 | 0,013                      | 0,0        | <del>6,5</del></br>1,9 | 0,0          | <del>6,5</del></br>1,9 |
 | Base de données    | <del>0,0</del></br>2,3      | <del>0,0</del></br>0,053   | 0,0        | <del>0,0</del></br>6,9 | 0,0          | <del>0,0</del></br>9,2 |
 
-**Tab.9**: Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b), après l’introduction de la base de données.
+**Tab.9** : Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b), après l’introduction de la base de données.
 
 Les résultats confirment que la consommation reste majoritairement portée par le navigateur. L’écran demeure la principale source de consommation, suivi du CPU et du réseau.
 
@@ -337,7 +337,7 @@ Nous pouvons ainsi comparer les mesures obtenues avec EcoIndex [avant](https://g
 | 3. Revenir à la page et choisir une autre musique	| <del>41 D 🟡</del><br/>40 D 🟡 | <del>2,18</del><br/>2,2  | 10 034         | 26       | <del>133</del><br/>137
 | 4. Lancer la musique                             	| <del>86 A 🟢</del><br/>84 A 🟢 | <del>1,28</del><br/>1,32 | 41             | 2        | <del>810</del><br/>1 137
 
-**Tab.10**: Effet du passage de la base de données (CouchDB) mesuré avec EcoIndex.
+**Tab.10** : Effet du passage de la base de données (CouchDB) mesuré avec EcoIndex.
 
 Ce que nous observons, c’est que le passage à CouchDB n’a pas entraîné une amélioration de l’empreinte environnementale, mais plutôt un léger recul pour certaines étapes. Globalement, les notes EcoIndex restent proches, mais les pages deviennent plus lourdes et certaines actions consomment davantage de ressources.
 
@@ -358,3 +358,23 @@ Dès lors, deux stratégies équivalentes peuvent être envisagées pour affiche
 Dans les deux cas, ce filtrage nécessite d’indexer ou de stocker les musiques en fonction de leur date et heure d’ajout dans la base.
 
 Nous retiendrons la seconde stratégie, car elle garantit une expérience utilisateur plus homogène : peu importe le moment de la journée où l’utilisateur ouvre l’application, il verra toujours les titres les plus récemment publiés, sans variation de quantité ou de pertinence.
+
+![More](./docs/screeshot/Pagination.png)
+ **Fig. 5** : Chargement progressif (à la demande) des musiques (copie d'écran).
+ (a)                 | cpu (mWh)                   | mem (mWh)                  | disk (mWh) | network (mWh)          | screen (mWh)            | total (mWh)            |
+| ------------------ | --------------------------- | -------------------------- | ---------- | ---------------------- | ----------------------- | ---------------------- | 
+| Navigateur         | <del>110,0</del></br>3,7    | <del>0,35</del></br>0,053  | 0,0        | <del>17</del></br>2,0  | <del>280,0</del></br>69 | <del>400</del></br>75  |
+| Serveur Web        | <del>0,017</del></br>0,0046 | <del>0,46</del></br>0,0030 | 0,0        | <del>1,9</del></br>1,9 | 0,0                     | <del>2,0</del></br>1,9 |
+| Base de données    | <del>6,2</del></br>0,87     | <del>0,020</del></br>0,052 | 0,0        | <del>14</del></br>0,14 | 0,0                     | <del>20</del></br>1,1  |
+
+**Tab.11** : Effet sur la consommation énergétique du chargement progressif (à la demande) lors de la consultation des musiques de la plateforme de streaming.
+
+L’implémentation de la stratégie en question (cf. Fig.5) a l’effet attendu (cf. Tab.11) : la consommation électrique de l’ensemble des composants se retrouve fortement réduite, jusqu’à devenir majoritairement dominée par celle de l’écran.
+
+On pourrait bien sûr objecter que, si l’on souhaitait afficher l’intégralité du catalogue musical, la consommation deviendrait alors supérieure à celle observée avant la mise en place du chargement progressif. Toutefois, le nombre important d’interactions nécessaires pour parvenir à un tel résultat rend ce scénario d’usage peu probable, d’autant plus que les morceaux les plus récents sont affichés en priorité.
+
+Pour résumer, le passage d’un affichage exhaustif de l’ensemble des musiques à un chargement progressif par tranches a permis de réduire la consommation globale du navigateur de **400 mWh à 75 mWh**, et celle de la base de données de **20 mWh à 1,1 mWh**. Des techniques simples de base de données (indexation par date d’ajout, limitation du nombre de résultats et pagination) ont permis de ramener la consommation énergétique à un niveau proche de sa valeur minimale.
+
+En l’état, la consommation électrique devient quasi constante vis-à-vis de la volumétrie totale du catalogue musical, et atteint un niveau si faible que la part liée au CPU, à la mémoire et au réseau devient négligeable face à celle de l’écran.
+
+L’enjeu des évolutions futures de la plateforme sera donc de veiller au maintien de cette sobriété.
