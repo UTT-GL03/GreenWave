@@ -1,22 +1,49 @@
-import './Nav.css'
+import { Link, useNavigate } from "react-router-dom";
 import placeholder from './assets/placeholderimg.png'
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import './Nav.css';
 
 function Nav() {
+
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && query.trim() !== "") {
+      navigate(`/search/${query.toLowerCase()}`);
+    }
+  };
+
+  const handleSearch = () => {
+    if (query.trim() !== "") {
+      navigate(`/search/${query.toLowerCase()}`);
+    }
+  };
+
   return (
-      <header>
-        <nav className=''>
-          <Link to="/" className=''>
-            <div>
-              <img src={placeholder} className="placeholder" alt='placeholder' />
-              <p>GreenWave</p>
-            </div>
-          </Link>
-          <input type='text' name='searchBar' />
-          <a href=''>Compte</a>
-        </nav>
-      </header>
-  )
+    <header>
+      <nav>
+        <Link to="/">
+          <div>
+            <img src={placeholder} className="placeholder" alt='placeholder' />
+            <p>GreenWave</p>
+          </div>
+        </Link>
+
+        <input
+          type="text"
+          placeholder="Rechercher..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+
+        <button onClick={handleSearch}>Rechercher</button>
+
+        <a href="">Compte</a>
+      </nav>
+    </header>
+  );
 }
 
-export default Nav
+export default Nav;

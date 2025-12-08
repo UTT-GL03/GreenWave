@@ -1,6 +1,7 @@
 import './App.css'
 import { Link, Routes, Route } from "react-router-dom";
 import Detail from './Detail';
+import SearchResults from './SearchResults';
 import placeholder from './assets/placeholderimg.png';
 import { useEffect, useState } from 'react';
 
@@ -63,7 +64,7 @@ function App() {
                   <Link key={music._id} to={`/detail/${music._id}`}>
                     <article className="music-card">
                       <img src={placeholder} alt={music.title} />
-                      <p>{music.title}</p>
+                      <p>{music.title.charAt(0).toUpperCase() + music.title.slice(1)}</p>
                       <p>
                         {artist
                           ? `${artist.firstName} ${artist.lastName}`
@@ -84,6 +85,7 @@ function App() {
 
         {/* Detail page */}
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/search/:query" element={<SearchResults />} />
       </Routes>
     </>
   );
