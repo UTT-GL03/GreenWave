@@ -415,7 +415,7 @@ Nous avons donc mesuré l’impact de trois scénarios GreenFrame (consultation 
 Les mesures avec GreenFrame montrent que la recherche est de loin l’action la plus sobre de notre service avec seulement ~5 mWh, elle consomme environ 20 fois moins que la consultation de l’accueil ou d’un titre.
 Elle n’introduit donc aucun surcoût significatif tout en apportant un gain majeur d’usage, puisqu’elle évite la navigation et le chargement de pages plus lourdes.
 
-
+Pour compléter cette analyse avec une approche orientée interface, nous avons également évalué l’impact de la nouvelle fonctionnalité à l’aide de GreenIT-Analysis, en observant les variations d’EcoIndex, de taille du DOM et du nombre de requêtes sur nos scénarios d’usage.
 
 | (a)                                               | EcoIndex | GES (gCO2e) | Taille du DOM  | Requêtes | Taille de la page (ko) |
 |---------------------------------------------------|---------:|------------:|---------------:|---------:|------------------------:
@@ -426,15 +426,17 @@ Elle n’introduit donc aucun surcoût significatif tout en apportant un gain ma
 
 | (b)                                               | EcoIndex | GES (gCO2e) | Taille du DOM  | Requêtes | Taille de la page (ko) |
 |---------------------------------------------------|---------:|------------:|---------------:|---------:|------------------------:
-| 1. Chargement de la page d'accueil                | 33 E 🟠 | 2,34        | 10 021         | 8        | 2 612                  |
-| 2. Effectuer une recherche           	            | 85 A 🟢 | 1,32        | 28             | 2        | 1 137                  |
-| 3. Choisir une musique                          	| 40 D 🟡 | 2,2         | 10 034         | 26       | 137                    |
-| 4. Lancer la musique                             	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
-| 5. Revenir à la page d'accueil                   	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
-| 6. Effectuer une nouvelle recherche             	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
-| 7. Choisir une musique                          	| 40 D 🟡 | 2,2         | 10 034         | 26       | 137                    |
-| 8. Lancer la musique                             	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
+| 1. Chargement de la page d'accueil                | 83 A 🟢 | 1,34        | 123            | 12       | 361                    |
+| 2. Effectuer une recherche           	            | 84 A 🟢 | 1,31        | 123            | 28       | 372                    |
+| 3. Choisir une musique                          	| 91 A 🟢 | 1,18        | 29             | 4        | 7                      |
+| 4. Lancer la musique                             	| 90 A 🟢 | 1,2         | 42             | 5        | 8                      |
+| 5. Revenir à la page d'accueil                   	| 88 A 🟢 | 1,24        | 136            | 0        | 0                      |
+| 6. Effectuer une nouvelle recherche             	| 87 A 🟢 | 1,36        | 136            | 1        | 5                      |
+| 7. Choisir une musique                          	| 90 A 🟢 | 1,2         | 42             | 4        | 7                      |
+| 8. Lancer la musique                             	| 90 A 🟢 | 1,2         | 42             | 4        | 7                      |
 
 **Tab.13** : Présente l’estimation de la consommation énergétique lors du scénario 1 (tableau a) et lors du scénario 2 (tableau b) avec EcoIndex.
 
+Les résultats montrent que l’ajout de la recherche ne dégrade pas la performance environnementale des pages, puisque l’EcoIndex reste systématiquement en classe A, avec des émissions similaires à celles du scénario initial. Les variations observées (légère hausse du nombre de requêtes lors de la recherche) sont compensées par un DOM stable et une taille de page maîtrisée, confirmant que la fonctionnalité reste sobre et bien intégrée.
 
+En combinant les mesures GreenFrame et GreenIT, nous confirmons que la recherche apporte un bénéfice d’usage majeur tout en maintenant un impact écologique très faible. Elle s’intègre donc naturellement dans notre démarche d’écoconception et justifie pleinement sa place dans la version finale du service.
