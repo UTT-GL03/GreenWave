@@ -54,6 +54,14 @@ jobs:
         with:
           name: EcoIndex
           path: Consulterdesmusiques.html
+      - name: Run GreenIT Analysis CLI
+        run: |
+          greenit analyse --format html --ci scenarios/search_music.yml
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: EcoIndex
+          path: Rechercherdesmusques.html
   measure_energy_consumption:
     needs: build
     runs-on: ubuntu-latest
