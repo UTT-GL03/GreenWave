@@ -63,7 +63,7 @@ Nous avons réaliser une analyse des plateformes de nos concurents et voici les 
 **Tab.1** : Mesure de l'EcoIndex moyen de services de streaming musicaux.
 
 Le spectre des notes est très varié de A à E, pour les moins bon site : [Spotify](https://open.spotify.com/) & [](https://music.apple.com/fr/new) nous constatons un grand nombre de contenu disponible des la page d'accueil. De plus, la page se charge complètement sans que ce soit nécessaire, l'utilisateur ne la défilant pas entière systématiquement. La résolution des pochettes d'album et de musique peut aussi être de trop grande qualité pour l'usage que nous en avons. Le site affiche aussi constament les playlists enregistrés de l'utilisateur ce qui ajoute autant de requête pour une image que de playlist enregistrée par l'utilisateur.
-A côté nous avons [Youtube Music](https://music.youtube.com/) qui s'impose en bon élève avec un bon score, ce résultat peut s'expliquer par un faible chargement de contenu à l'ouverture de la page d'accueil. Contrairement à spotify, YT Music, pour la recherche, envoie une requête après que l'utilisateur ai appuyé sur "entrée" et n'envoie pas une requete à chaque nouvelle lettre entrée.
+A côté nous avons [Youtube Music](https://music.youtube.com/) qui s'impose en bon élève avec un bon score, ce résultat peut s'expliquer par un faible chargement de contenu à l'ouverture de la page d'accueil. Contrairement à spotify, YT Music, pour la recherche, envoie une requête après que l'utilisateur ait appuyé sur "entrée" et n'envoie pas une requete à chaque nouvelle lettre entrée.
 
 Ces comparaisons montrent qu'il existe des moyens d'obtenir un streaming quasi instantannée tout en réduisant au maximum les ressources utilisées.
 
@@ -378,3 +378,63 @@ Pour résumer, le passage d’un affichage exhaustif de l’ensemble des musique
 En l’état, la consommation électrique devient quasi constante vis-à-vis de la volumétrie totale du catalogue musical, et atteint un niveau si faible que la part liée au CPU, à la mémoire et au réseau devient négligeable face à celle de l’écran.
 
 L’enjeu des évolutions futures de la plateforme sera donc de veiller au maintien de cette sobriété.
+
+## Améliorations et évolutions du service
+Après la première version fonctionnelle du service, une phase d’amélioration a été engagée avec un objectif clair : améliorer la qualité d’usage sans augmenter significativement l’impact écologique.
+Pour cela, nous avons repris certaines fonctionnalités identifiées mais laissées en attente, et avons procédé à leur développement de manière itérative, en mesurant systématiquement leur impact.
+
+### Fonctionnalité ajoutée : Recherche par nom de musique
+L’une des grandes améliorations apportées est l’ajout de la recherche d’un titre par son nom, fonctionnalité que l’on trouve sur toutes les plateformes musicales modernes. Elle répond à un besoin essentiel : permettre à l’utilisateur de retrouver rapidement un morceau précis, sans devoir parcourir manuellement albums ou playlists.
+
+La recherche est prioritaire pour nous puisqu'elle représente l’un des usages les plus courants d'un service de streaming, elle améliore fortement l’ergonomie générale et réduit le nombre de pages à charger, elle rend le service utilisable même en présence d’un catalogue plus grand et elle s’inscrit pleinement dans une démarche d’écoconception, car elle évite des actions inutiles (navigation, rechargement de listes complètes…).
+
+#### Analyse des impacts
+Un des enjeux de cette phase d'amélioration était de vérifier que la recherche n'introduise pas un surcoût environnemental.
+Nous avons donc mesuré l’impact de trois scénarios GreenFrame (consultation accueil, consultation musique, recherche).
+
+ (a)                 | cpu (mWh) | mem (mWh) | disk (mWh) | network (mWh) | screen (mWh) | total (mWh) |
+| ------------------ | --------- | --------- | ---------- | ------------- | ------------ | ----------- | 
+| Navigateur         | 3,4       | 0,054     | 0,0        | 2,0           | 70           | 75          |
+| Serveur Web        | 0,0035    | 0,0029    | 0,0        | 1,9           | 0,0          | 1,9         |
+| Base de données    | 0,78      | 0,058     | 0,0        | 0,14          | 0,0          | 0,97        |
+
+ (b)                 | cpu (mWh) | mem (mWh) | disk (mWh) | network (mWh) | screen (mWh) | total (mWh) |
+| ------------------ | --------- | --------- | ---------- | ------------- | ------------ | ----------- | 
+| Navigateur         | 1,3       | 0,048     | 0,0        | 2,1           | 68,0         | 71          |
+| Serveur Web        | 0,0032    | 0,0028    | 0,0        | 1,9           | 0,0          | 1,9         |
+| Base de données    | 0,68      | 0,056     | 0,0        | 0,16          | 0,0          | 9,0         |
+
+ (c)                 | cpu (mWh) | mem (mWh) | disk (mWh) | network (mWh) | screen (mWh) | total (mWh) |
+| ------------------ | --------- | --------- | ---------- | ------------- | ------------ | ----------- | 
+| Navigateur         | 1,2       | 0,0028    | 0,0        | 1,4           | 1,0          | 3,6         |
+| Serveur Web        | 0,0023    | 1,0e-4    | 0,0        | 1,3           | 0,0          | 1,3         |
+| Base de données    | 0,10      | 0,0021    | 0,0        | 0,093         | 0,0          | 0,20        |
+
+**Tab.12** : Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b), lors de la recherche (tableau c) après l’introduction de la fonctionnalité de recherche avec GreenFrame.
+
+Les mesures avec GreenFrame montrent que la recherche est de loin l’action la plus sobre de notre service avec seulement ~5 mWh, elle consomme environ 20 fois moins que la consultation de l’accueil ou d’un titre.
+Elle n’introduit donc aucun surcoût significatif tout en apportant un gain majeur d’usage, puisqu’elle évite la navigation et le chargement de pages plus lourdes.
+
+
+
+| (a)                                               | EcoIndex | GES (gCO2e) | Taille du DOM  | Requêtes | Taille de la page (ko) |
+|---------------------------------------------------|---------:|------------:|---------------:|---------:|------------------------:
+| 1. Consulter les musiques			                    | 83 A 🟢 | 1,34        | 123            | 12       | 361                    |
+| 2. Choisir une musique et la charger 	            | 91 A 🟢 | 1,19        | 35             | 4        | 8                      |
+| 3. Revenir à la page et choisir une autre musique	| 88 A 🟢 | 1,24        | 89             | 3        | 6                      |
+| 4. Lancer la musique                             	| 90 A 🟢 | 1,2         | 42             | 4        | 7                      |
+
+| (b)                                               | EcoIndex | GES (gCO2e) | Taille du DOM  | Requêtes | Taille de la page (ko) |
+|---------------------------------------------------|---------:|------------:|---------------:|---------:|------------------------:
+| 1. Chargement de la page d'accueil                | 33 E 🟠 | 2,34        | 10 021         | 8        | 2 612                  |
+| 2. Effectuer une recherche           	            | 85 A 🟢 | 1,32        | 28             | 2        | 1 137                  |
+| 3. Choisir une musique                          	| 40 D 🟡 | 2,2         | 10 034         | 26       | 137                    |
+| 4. Lancer la musique                             	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
+| 5. Revenir à la page d'accueil                   	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
+| 6. Effectuer une nouvelle recherche             	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
+| 7. Choisir une musique                          	| 40 D 🟡 | 2,2         | 10 034         | 26       | 137                    |
+| 8. Lancer la musique                             	| 84 A 🟢 | 1,32        | 41             | 2        | 1 137                  |
+
+**Tab.13** : Présente l’estimation de la consommation énergétique lors du scénario 1 (tableau a) et lors du scénario 2 (tableau b) avec EcoIndex.
+
+
