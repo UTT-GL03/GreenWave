@@ -1,5 +1,5 @@
 # To be used with GreenIT Analysis CLI
-- name: Rechercher et écouter des musiques
+- name: Rechercher des musiques
   url: http://localhost/
   waitForSelector: header input[type="text"]
   actions:
