@@ -1,4 +1,3 @@
-# Scénario simplifié pour GreenIT Analysis CLI
 - name: Ajouter une musique aux favoris et consulter la page des favoris
   url: http://localhost/
   waitForSelector: .list-music
@@ -10,11 +9,15 @@
       pageChange: true
       waitForSelector: .music-detail
 
+    - name: Attendre que le bouton favori soit chargé
+      type: waitForSelector
+      element: .music-detail button.favorite, .music-detail button.favorite-active
+
     - name: Ajouter la musique aux favoris si nécessaire
       type: click
-      element: .favorite
+      element: .music-detail button.favorite
       optional: true
-      waitForSelector: .favorite-active
+      waitForSelector: .music-detail button.favorite-active
 
     - name: Accéder à la page des favoris depuis la navigation
       type: click
