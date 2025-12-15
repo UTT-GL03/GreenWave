@@ -12,3 +12,13 @@
     align-items: center;
     margin-bottom: 140px;
 }
+
+.favorite {
+    margin-top: 20px;
+    background-color: green;
+}
+
+.favorite-active {
+    margin-top: 20px;
+    background-color: red;
+}

@@ -40,7 +40,9 @@ function Nav() {
 
         <button onClick={handleSearch}>Rechercher</button>
 
+        <Link to="/favorites">Favoris</Link>
         <a href="">Compte</a>
+
       </nav>
     </header>
   );
