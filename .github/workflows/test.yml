@@ -52,7 +52,7 @@ jobs:
       - name: Run GreenIT Analysis CLI Search
         run: |
           greenit analyse --format html --ci scenarios/search_music.yml
-      - name: Run GreenIT Analysis CLI Search
+      - name: Run GreenIT Analysis CLI Favorite
         run: |
           greenit analyse --format html --ci scenarios/add_music_favorite.yml
       - name: Save results

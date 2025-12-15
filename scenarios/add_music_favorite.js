@@ -18,5 +18,4 @@ module.exports = async (page) => {
   }
 
   await page.click('header nav a[href="/favorites"]');
-  await page.waitForSelector('.list-music .music-card');
 };
