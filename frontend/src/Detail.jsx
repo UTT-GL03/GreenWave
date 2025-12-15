@@ -49,7 +49,7 @@ function Detail() {
   return (
     <div className="music-detail">
 
-      <h2>{music.title}</h2>
+      <h2>{music.title.charAt(0).toUpperCase() + music.title.slice(1)}</h2>
       <img src={placeholder} alt={music.title} />
 
       {/* Display formatted publication date */}

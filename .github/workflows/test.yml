@@ -46,14 +46,19 @@ jobs:
           cd GreenIT-Analysis-cli-master
           npm install
           npm link
-      - name: Run GreenIT Analysis CLI
+      - name: Run GreenIT Analysis CLI Home
         run: |
           greenit analyse --format html --ci scenarios/start_music_from_main.yml
+      - name: Run GreenIT Analysis CLI Search
+        run: |
+          greenit analyse --format html --ci scenarios/search_music.yml
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
           name: EcoIndex
-          path: Consulterdesmusiques.html
+          path: |
+            Consulterdesmusiques.html
+            Rechercherdesmusiques.html
   measure_energy_consumption:
     needs: build
     runs-on: ubuntu-latest
