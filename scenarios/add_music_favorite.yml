@@ -1,0 +1,26 @@
+# To be used with GreenIT Analysis CLI
+- name: Ajouter une musique aux favoris et consulter la page des favoris
+  url: http://localhost/
+  waitForSelector: .list-music
+  actions:
+
+    - name: Cliquer sur la première musique de la page d'accueil
+      type: click
+      element: .list-music > a:nth-child(1)
+      pageChange: true
+      waitForSelector: .music-detail
+
+    - name: Ajouter la musique aux favoris
+      type: click
+      element: .music-detail button.favorite
+      waitForSelector: .music-detail button.favorite-active
+
+    - name: Accéder à la page des favoris depuis la navigation
+      type: click
+      element: header nav a[href="/favorites"]
+      pageChange: true
+      waitForSelector: .list-music
+
+    - name: Vérifier qu'au moins une musique est présente dans les favoris
+      type: wait
+      element: .list-music > a:nth-child(1)
