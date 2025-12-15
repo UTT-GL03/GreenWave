@@ -388,6 +388,10 @@ L’une des grandes améliorations apportées est l’ajout de la recherche d’
 
 La recherche est prioritaire pour nous puisqu'elle représente l’un des usages les plus courants d'un service de streaming, elle améliore fortement l’ergonomie générale et réduit le nombre de pages à charger, elle rend le service utilisable même en présence d’un catalogue plus grand et elle s’inscrit pleinement dans une démarche d’écoconception, car elle évite des actions inutiles (navigation, rechargement de listes complètes…).
 
+Notre recherche peut encore être améliorée puisqu'actuellement elle fonctionne seulement avec le premier mot du titre de la musique et ne décompose pas les différents mots du titre pour rechercher dedans.
+
+![More](./docs/screenshot/Search.png)
+
 #### Analyse des impacts
 Un des enjeux de cette phase d'amélioration était de vérifier que la recherche n'introduise pas un surcoût environnemental.
 Nous avons donc mesuré l’impact de trois scénarios GreenFrame (consultation accueil, consultation musique, recherche).
