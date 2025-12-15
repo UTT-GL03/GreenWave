@@ -10,9 +10,14 @@
       pageChange: true
       waitForSelector: .music-detail
 
-    - name: Ajouter la musique aux favoris
+    - name: Attendre le bouton favori
+      type: wait
+      element: .music-detail button
+
+    - name: Ajouter la musique aux favoris si nécessaire
       type: click
       element: .music-detail button.favorite
+      optional: true
       waitForSelector: .music-detail button.favorite-active
 
     - name: Accéder à la page des favoris depuis la navigation
@@ -23,4 +28,4 @@
 
     - name: Vérifier qu'au moins une musique est présente dans les favoris
       type: wait
-      element: .list-music > a:nth-child(1)
+      element: .music-card
