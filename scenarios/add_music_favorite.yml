@@ -12,9 +12,9 @@
 
     - name: Ajouter la musique aux favoris si nécessaire
       type: click
-      element: .music-detail button.favorite
+      element: .music-detail > .favorite
       optional: true
-      waitForSelector: .music-detail button.favorite-active
+      waitForSelector: .music-detail > .favorite-active
 
     - name: Accéder à la page des favoris depuis la navigation
       type: click
