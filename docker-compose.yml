@@ -52,10 +52,10 @@ services:
     image: curlimages/curl
     entrypoint: [ "/bin/sh", "-c" ]
     volumes:
-      - ./backend/favorite_view.json:/favorite_view.json
+      - ./backend/favorite.json:/favorite.json
     command:
       - |
-        curl -X PUT http://backend:5984/greenwavedb/_design/favorite -H "Content-Type: application/json" -d @/favorite_view.json -u "${COUCHDB_USER}:${COUCHDB_PASSWORD}"
+        curl -X PUT http://backend:5984/greenwavedb/_design/favorite -H "Content-Type: application/json" -d @/favorite.json -u "${COUCHDB_USER}:${COUCHDB_PASSWORD}"
     depends_on:
       accessible_backend:
         condition: service_completed_successfully
