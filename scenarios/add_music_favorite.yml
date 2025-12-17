@@ -10,8 +10,9 @@
       waitForSelector: .music-detail
 
     - name: Attendre que le bouton favori soit chargé
-      type: waitForSelector
-      element: .music-detail button.favorite, .music-detail button.favorite-active
+      type: click
+      element: .music-detail
+      waitForSelector: .music-detail button.favorite, .music-detail button.favorite-active
 
     - name: Ajouter la musique aux favoris si nécessaire
       type: click
@@ -25,6 +26,8 @@
       pageChange: true
       waitForSelector: .list-music
 
-    - name: Vérifier qu'au moins une musique est présente dans les favoris
-      type: waitForSelector
-      element: .music-card
+    - name: Accéder à la page des favoris depuis la navigation
+      type: click
+      element: header nav a[href="/favorites"]
+      pageChange: true
+      waitForSelector: .music-card

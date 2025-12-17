@@ -1,11 +1,11 @@
 # To be used with GreenIT Analysis CLI
 - name: Rechercher des musiques
   url: http://localhost/
-  waitForSelector: header input[type="text"]
+  waitForSelector: header input
   actions:
     - name: Saisir une recherche
       type: type
-      element: header input[type="text"]
+      element: header input
       value: "eli"
 
     - name: Lancer la recherche
@@ -28,11 +28,19 @@
       type: click
       element: header > nav > a
       pageChange: true
-      waitForSelector: header input[type="text"]
+      waitForSelector: header input
+    
+    - name: Select all
+      type: press
+      key: Control+A
+
+    - name: Effacer
+      type: press
+      key: Backspace
 
     - name: Nouvelle recherche
       type: type
-      element: header input[type="text"]
+      element: header input
       value: "tem"
 
     - name: Lancer la recherche
