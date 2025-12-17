@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import placeholder from "./assets/placeholderimg.png";
 import "./SearchResults.css"
+import { Link, Routes, Route } from "react-router-dom";
 
 function SearchResults() {
 
@@ -52,15 +53,17 @@ function SearchResults() {
                     const artist = artists[music.artist];
 
                     return (
-                        <article key={music._id} className="music-card">
-                            <img src={placeholder} alt={music.title} />
-                            <p>{music.title.charAt(0).toUpperCase() + music.title.slice(1)}</p>
-                            <p>
-                                {artist
-                                    ? `${artist.firstName} ${artist.lastName}`
-                                    : "Unknown"}
-                            </p>
-                        </article>
+                        <Link key={music._id} to={`/detail/${music._id}`}>
+                            <article key={music._id} className="music-card">
+                                <img src={placeholder} alt={music.title} />
+                                <p>{music.title.charAt(0).toUpperCase() + music.title.slice(1)}</p>
+                                <p>
+                                    {artist
+                                        ? `${artist.firstName} ${artist.lastName}`
+                                        : "Unknown"}
+                                </p>
+                            </article>
+                        </Link>
                     );
                 })}
 

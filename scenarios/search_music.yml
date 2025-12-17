@@ -29,14 +29,6 @@
       element: header > nav > a
       pageChange: true
       waitForSelector: header input
-    
-    - name: Select all
-      type: press
-      key: Control+A
-
-    - name: Effacer
-      type: press
-      key: Backspace
 
     - name: Nouvelle recherche
       type: type
