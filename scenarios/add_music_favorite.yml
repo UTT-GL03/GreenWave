@@ -1,4 +1,4 @@
-- name: Ajouter une musique aux favoris et consulter la page des favoris
+- name: Ajouter musique favori
   url: http://localhost/
   waitForSelector: .list-music
   actions:
@@ -19,12 +19,6 @@
       element: .music-detail button.favorite
       optional: true
       waitForSelector: .music-detail button.favorite-active
-
-    - name: Accéder à la page des favoris depuis la navigation
-      type: click
-      element: header nav a[href="/favorites"]
-      pageChange: true
-      waitForSelector: .list-music
 
     - name: Accéder à la page des favoris depuis la navigation
       type: click
