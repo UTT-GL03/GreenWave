@@ -60,7 +60,9 @@ function Favorites() {
   if (musics.length === 0) return <p>Aucun favori :(</p>;
 
   return (
-    <div className="list-music">
+    <>
+      <h2>Vos favoris</h2>
+      <div className="list-music">
       {musics.map((music) => {
         const artist = artists[music.artist];
 
@@ -79,6 +81,7 @@ function Favorites() {
         );
       })}
     </div>
+    </>
   );
 }
 
