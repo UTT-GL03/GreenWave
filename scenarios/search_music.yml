@@ -6,7 +6,7 @@
     - name: Saisir une recherche
       type: text
       element: header input
-      value: "eli"
+      content: "eli"
 
     - name: Lancer la recherche
       type: click
@@ -33,7 +33,7 @@
     - name: Nouvelle recherche
       type: text
       element: header input
-      value: "tem"
+      content: "tem"
 
     - name: Lancer la recherche
       type: click
