@@ -4,7 +4,7 @@
   waitForSelector: header input
   actions:
     - name: Saisir une recherche
-      type: type
+      type: text
       element: header input
       value: "eli"
 
@@ -31,7 +31,7 @@
       waitForSelector: header input
 
     - name: Nouvelle recherche
-      type: type
+      type: text
       element: header input
       value: "tem"
 
