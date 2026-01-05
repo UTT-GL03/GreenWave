@@ -5,18 +5,21 @@ import { usePlayer } from "./PlayerContext";
 import dayjs from 'dayjs';
 import placeholder from './assets/placeholderimg.png';
 
+const USER_ID = "user_2"; // user id HARD CODE
+
 function Detail() {
 
-  // Local states for the music with its artist and album
   const [music, setMusic] = useState(null);
   const [artist, setArtist] = useState(null);
   const [album, setAlbum] = useState(null);
 
-  // Get the music ID from the URL
-  const { id } = useParams();
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [favoriteRev, setFavoriteRev] = useState(null);
 
-  // Access the global player context
+  const { id } = useParams();
   const { playMusic } = usePlayer();
+
+  const favoriteId = `favorite:${USER_ID}:${id}`;
 
   useEffect(() => {
 
@@ -35,8 +38,22 @@ function Detail() {
         fetch(`http://localhost:5984/greenwavedb/${musicDoc.album}`)
           .then(res => res.json())
           .then(setAlbum);
+      });
+
+    // Check if music in user's favorite
+    fetch(`http://localhost:5984/greenwavedb/${favoriteId}`)
+      .then(res => {
+        if (res.ok) return res.json();
+        throw new Error("Not favorite");
       })
-      .catch(err => console.error("CouchDB error:", err));
+      .then(doc => {
+        setIsFavorite(true);
+        setFavoriteRev(doc._rev);
+      })
+      .catch(() => {
+        setIsFavorite(false);
+        setFavoriteRev(null);
+      });
 
   }, [id]); // Rerun when ID changes
 
@@ -45,6 +62,35 @@ function Detail() {
 
   // Call the global player to play this track
   const handlePlay = () => playMusic(music);
+
+  // Add to favorite
+  const addToFavorite = () => {
+    fetch(`http://localhost:5984/greenwavedb/${favoriteId}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: USER_ID,
+        musicId: id
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        setIsFavorite(true);
+        setFavoriteRev(data.rev);
+      });
+  };
+
+  // remove from favorite
+  const removeFromFavorite = () => {
+    fetch(
+      `http://localhost:5984/greenwavedb/${favoriteId}?rev=${favoriteRev}`,
+      { method: "DELETE" }
+    )
+      .then(() => {
+        setIsFavorite(false);
+        setFavoriteRev(null);
+      });
+  };
 
   return (
     <div className="music-detail">
@@ -69,6 +115,13 @@ function Detail() {
 
       {/* Play button */}
       <button onClick={handlePlay}>▶️ Play this song</button>
+
+      <button
+        className={isFavorite ? "favorite-active" : "favorite"}
+        onClick={isFavorite ? removeFromFavorite : addToFavorite}
+      >
+        {isFavorite ? "Remove from favorites" : "Add to favorites"}
+      </button>
 
     </div>
   );

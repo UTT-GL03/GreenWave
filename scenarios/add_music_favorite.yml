@@ -1,0 +1,27 @@
+- name: Ajouter musique favori
+  url: http://localhost/
+  waitForSelector: .list-music
+  actions:
+
+    - name: Cliquer sur la première musique de la page d'accueil
+      type: click
+      element: .list-music > a:nth-child(1)
+      pageChange: true
+      waitForSelector: .music-detail
+
+    - name: Attendre que le bouton favori soit chargé
+      type: click
+      element: .music-detail
+      waitForSelector: .music-detail button.favorite, .music-detail button.favorite-active
+
+    - name: Ajouter la musique aux favoris si nécessaire
+      type: click
+      element: .music-detail button.favorite
+      optional: true
+      waitForSelector: .music-detail button.favorite-active
+
+    - name: Accéder à la page des favoris depuis la navigation
+      type: click
+      element: header nav a[href="/favorites"]
+      pageChange: true
+      waitForSelector: .music-card

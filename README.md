@@ -391,6 +391,7 @@ La recherche est prioritaire pour nous puisqu'elle représente l’un des usages
 Notre recherche peut encore être améliorée puisqu'actuellement elle fonctionne seulement avec le premier mot du titre de la musique et ne décompose pas les différents mots du titre pour rechercher dedans.
 
 ![More](./docs/screenshot/Search.png)
+ **Fig. 6** : Fonctionnalité de recherche (copie d'écran).
 
 #### Analyse des impacts
 Un des enjeux de cette phase d'amélioration était de vérifier que la recherche n'introduise pas un surcoût environnemental.
@@ -444,3 +445,62 @@ Pour compléter cette analyse avec une approche orientée interface, nous avons 
 Les résultats montrent que l’ajout de la recherche ne dégrade pas la performance environnementale des pages, puisque l’EcoIndex reste systématiquement en classe A, avec des émissions similaires à celles du scénario initial. Les variations observées (légère hausse du nombre de requêtes lors de la recherche) sont compensées par un DOM stable et une taille de page maîtrisée, confirmant que la fonctionnalité reste sobre et bien intégrée.
 
 En combinant les mesures GreenFrame et GreenIT, nous confirmons que la recherche apporte un bénéfice d’usage majeur tout en maintenant un impact écologique très faible. Elle s’intègre donc naturellement dans notre démarche d’écoconception et justifie pleinement sa place dans la version finale du service.
+
+### Fonctionnalité ajoutée : Favoris (ajout d’une musique + onglet Favoris)
+Une amélioration importante apportée au service est l’ajout d’un système de favoris, permettant à l’utilisateur d’enregistrer rapidement des musiques qu’il aime et de les retrouver dans un onglet dédié “Favoris”. Cette fonctionnalité répond à un besoin courant sur les plateformes musicales : éviter de “rechercher à nouveau” un titre ou de parcourir le catalogue pour le retrouver.
+
+L’ajout aux favoris est un geste simple avec un bouton “Ajouter aux favoris”), disponible directement sur la fiche musique. L’onglet Favoris répertorie ensuite l’ensemble des titres marqués, et permet de lancer la lecture en un minimum d’actions.
+
+![More](./docs/screenshot/Favorites.png) ![More](./docs/screenshot/AddFavorite.png) ![More](./docs/screenshot/RemoveFavorite.png)
+ **Fig. 6** : Fonctionnalité de favoris (copies d'écran).
+
+#### Analyse des impacts
+L’ajout de la fonctionnalité de favoris a nécessité l’introduction de nouvelles interactions, notamment l’enregistrement d’une musique et l’affichage d’un onglet dédié. Afin d’évaluer l’impact de ces nouvelles actions, une analyse énergétique a été réalisée à l’aide de GreenFrame.
+
+ (a)                 | cpu (mWh) | mem (mWh) | disk (mWh) | network (mWh) | screen (mWh) | total (mWh) |
+| ------------------ | --------- | --------- | ---------- | ------------- | ------------ | ----------- | 
+| Navigateur         | 3,5       | 0,053     | 0,0        | 2,1           | 69           | 75          |
+| Serveur Web        | 0,0044    | 0,0029    | 0,0        | 1,9           | 0,0          | 1,9         |
+| Base de données    | 0,70      | 0,070     | 0,0        | 0,14          | 0,0          | 0,92        |
+
+ (b)                 | cpu (mWh) | mem (mWh) | disk (mWh) | network (mWh) | screen (mWh) | total (mWh) |
+| ------------------ | --------- | --------- | ---------- | ------------- | ------------ | ----------- | 
+| Navigateur         | 1,4       | 0,048     | 0,0        | 2,1           | 67,0         | 71          |
+| Serveur Web        | 0,0041    | 0,0029    | 0,0        | 1,9           | 0,0          | 1,9         |
+| Base de données    | 0,77      | 0,067     | 0,0        | 0,17          | 0,0          | 1,0         |
+
+ (c)                 | cpu (mWh) | mem (mWh) | disk (mWh) | network (mWh) | screen (mWh) | total (mWh) |
+| ------------------ | --------- | --------- | ---------- | ------------- | ------------ | ----------- | 
+| Navigateur         | 1,4       | 0,0045    | 0,0        | 2,0           | 1,5          | 4,9         |
+| Serveur Web        | 0,0038    | 2,1e-4    | 0,0        | 2,0           | 0,0          | 2,0         |
+| Base de données    | 0,12      | 0,0050    | 0,0        | 0,093         | 0,0          | 0,22        |
+
+**Tab.14** : Présente l’estimation de la consommation énergétique lors de la consultation de la page d’accueil (tableau a) et lors de la consultation d’une musique (tableau b), lors de l'ajout en favoris (tableau c) après l’introduction de la fonctionnalité de favoris avec GreenFrame.
+
+Les résultats présentés dans le tableau 14 montrent que la consultation d’une musique (tableaux a et b) reste comparable aux mesures réalisées avant l’ajout de la fonctionnalité de favoris. L’action d’ajout en favoris (tableau c) présente une consommation énergétique plus faible, en raison d’une interaction courte et d’un affichage limité.
+
+La majorité de la consommation est liée au poste screen côté navigateur pour les scénarios de consultation, tandis que l’ajout en favoris sollicite principalement le serveur web et la base de données via une opération d’écriture simple, sans accès disque significatif.
+
+Pour compléter cette analyse avec une approche orientée interface, nous avons également évalué l’impact de la nouvelle fonctionnalité à l’aide de GreenIT-Analysis, en observant les variations d’EcoIndex, de taille du DOM et du nombre de requêtes sur nos scénarios d’usage.
+
+| (a)                                               | EcoIndex | GES (gCO2e) | Taille du DOM  | Requêtes | Taille de la page (ko) |
+|---------------------------------------------------|---------:|------------:|---------------:|---------:|------------------------:
+| 1. Consulter les musiques			                    | 83 A 🟢 | 1,34        | 123            | 12       | 361                    |
+| 2. Choisir une musique et la charger 	            | 91 A 🟢 | 1,19        | 35             | 4        | 8                      |
+| 3. Revenir à la page et choisir une autre musique	| 88 A 🟢 | 1,24        | 89             | 3        | 6                      |
+| 4. Lancer la musique                             	| 90 A 🟢 | 1,2         | 42             | 4        | 7                      |
+
+| (b)                                               | EcoIndex | GES (gCO2e) | Taille du DOM  | Requêtes | Taille de la page (ko) |
+|---------------------------------------------------|---------:|------------:|---------------:|---------:|------------------------:
+| 1. Chargement de la page d'accueil                | 83 A 🟢 | 1,34        | 124            | 11       | 364                    |
+| 2. Choisir une musique                          	| 90 A 🟢 | 1,2         | 31             | 5        | 8                      |
+| 3. Ajouter la musique aux favoris               	| 90 A 🟢 | 1,2         | 31             | 7        | 8                      |
+| 4. Aller sur la page Favoris                     	| 91 A 🟢 | 1,18        | 29             | 5        | 7                      |
+
+**Tab.15** : Présente l’estimation de la consommation énergétique lors du scénario 1 (tableau a) et lors de l'ajout aux favoris (tableau b) avec EcoIndex.
+
+Les résultats présentés dans le tableau 15 montrent que l’introduction de la fonctionnalité de favoris n’entraîne pas de dégradation notable des indicateurs. Les différents scénarios conservent un EcoIndex classé A, avec des valeurs proches entre la navigation classique et l’ajout aux favoris.
+
+L’augmentation du nombre de requêtes observée lors de l’ajout aux favoris reste limitée et n’a pas d’impact significatif sur la taille du DOM ni sur la taille des pages chargées. L’accès à l’onglet Favoris présente des métriques similaires, voire légèrement inférieures, à celles observées lors des parcours de consultation classiques.
+
+Cette analyse montre que la fonctionnalité de favoris s’intègre de manière cohérente dans l’application, en apportant une amélioration fonctionnelle sans introduire de surcoût énergétique significatif par rapport aux scénarios existants.

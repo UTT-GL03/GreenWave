@@ -1,0 +1,8 @@
+{
+  "_id": "_design/favorite",
+  "views": {
+    "favorite": {
+      "map": "function(doc) {\n  if (doc.userId && doc.musicId) {\n    emit(doc.userId, {_id: doc.musicId});\n  }\n}"
+    }
+  }
+}

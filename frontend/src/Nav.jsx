@@ -1,12 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import placeholder from './assets/placeholderimg.png'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './Nav.css';
 
 function Nav() {
 
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && query.trim() !== "") {
@@ -19,6 +20,10 @@ function Nav() {
       navigate(`/search/${query.toLowerCase()}`);
     }
   };
+
+  useEffect(() => {
+    setQuery("");
+  }, [location.pathname]);
 
   return (
     <header>
@@ -40,7 +45,9 @@ function Nav() {
 
         <button onClick={handleSearch}>Rechercher</button>
 
+        <Link to="/favorites">Favoris</Link>
         <a href="">Compte</a>
+
       </nav>
     </header>
   );

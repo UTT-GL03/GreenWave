@@ -52,6 +52,9 @@ jobs:
       - name: Run GreenIT Analysis CLI Search
         run: |
           greenit analyse --format html --ci scenarios/search_music.yml
+      - name: Run GreenIT Analysis CLI Favorite
+        run: |
+          greenit analyse --format html --ci scenarios/add_music_favorite.yml
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
@@ -59,6 +62,7 @@ jobs:
           path: |
             Consulterdesmusiques.html
             Rechercherdesmusiques.html
+            Ajoutermusiquefavori.html
   measure_energy_consumption:
     needs: build
     runs-on: ubuntu-latest

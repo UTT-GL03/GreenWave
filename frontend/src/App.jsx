@@ -1,6 +1,7 @@
 import './App.css'
 import { Link, Routes, Route } from "react-router-dom";
 import Detail from './Detail';
+import Favorites from './Favorites';
 import SearchResults from './SearchResults';
 import placeholder from './assets/placeholderimg.png';
 import { useEffect, useState } from 'react';
@@ -86,6 +87,7 @@ function App() {
         {/* Detail page */}
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/search/:query" element={<SearchResults />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </>
   );
